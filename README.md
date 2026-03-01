@@ -1,5 +1,9 @@
 # the-absolute-minimum-you-must-know
 
+<!-- BADGES:START -->
+[![cli-tool](https://img.shields.io/badge/-cli--tool-blue?style=flat-square)](https://github.com/topics/cli-tool) [![documentation](https://img.shields.io/badge/-documentation-blue?style=flat-square)](https://github.com/topics/documentation) [![git](https://img.shields.io/badge/-git-blue?style=flat-square)](https://github.com/topics/git) [![markdown](https://img.shields.io/badge/-markdown-blue?style=flat-square)](https://github.com/topics/markdown) [![programming-basics](https://img.shields.io/badge/-programming--basics-blue?style=flat-square)](https://github.com/topics/programming-basics) [![python](https://img.shields.io/badge/-python-3776ab?style=flat-square)](https://github.com/topics/python) [![self-directed-learning](https://img.shields.io/badge/-self--directed--learning-blue?style=flat-square)](https://github.com/topics/self-directed-learning) [![programming-career](https://img.shields.io/badge/-programming--career-blue?style=flat-square)](https://github.com/topics/programming-career) [![book](https://img.shields.io/badge/-book-795548?style=flat-square)](https://github.com/topics/book) [![assessment](https://img.shields.io/badge/-assessment-blue?style=flat-square)](https://github.com/topics/assessment)
+<!-- BADGES:END -->
+
 A comprehensive collection of baseline knowledge assessments designed to help programmers evaluate and strengthen their understanding of fundamental programming concepts. This repository serves as both a learning resource and a self-assessment tool for essential topics including Git, Python, Markdown, and core computer science principles.
 
 ## Description
