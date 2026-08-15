@@ -1,0 +1,4 @@
+- source: project
+  gh-pages:
+    - id: d9631fca-bd11-4fd8-9813-fa4945fb7816
+      url: https://michael-borck.github.io/the-absolute-minimum-you-must-know/
