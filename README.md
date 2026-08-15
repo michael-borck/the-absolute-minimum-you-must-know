@@ -4,7 +4,7 @@
 [![documentation](https://img.shields.io/badge/-documentation-blue?style=flat-square)](https://github.com/topics/documentation) [![python](https://img.shields.io/badge/-python-3776ab?style=flat-square)](https://github.com/topics/python) [![self-directed-learning](https://img.shields.io/badge/-self--directed--learning-blue?style=flat-square)](https://github.com/topics/self-directed-learning) [![book](https://img.shields.io/badge/-book-795548?style=flat-square)](https://github.com/topics/book) [![assessment](https://img.shields.io/badge/-assessment-blue?style=flat-square)](https://github.com/topics/assessment)
 <!-- BADGES:END -->
 
-[![Test docs and publish book](https://github.com/michael-borck/the-absolute-minimum-you-must-know/actions/workflows/publish.yml/badge.svg)](https://github.com/michael-borck/the-absolute-minimum-you-must-know/actions/workflows/publish.yml)
+[![Test docs](https://github.com/michael-borck/the-absolute-minimum-you-must-know/actions/workflows/test.yml/badge.svg)](https://github.com/michael-borck/the-absolute-minimum-you-must-know/actions/workflows/test.yml)
 
 For every topic in software development there is a minimum viable set of ideas that
 unlocks everything else. Each `TAMYMN-*.md` file here is one page: read it in ten
@@ -61,6 +61,10 @@ Contributions welcome. Read [`STYLE.md`](STYLE.md) first — it defines the bar 
 chapter must meet (the required sections, the 120–200 line budget, and the rule that
 Python examples are passing doctests). `TAMYMN-Linux.md` and `TAMYMN-Git.md` are the
 exemplars. Then the usual: fork, branch, PR. CI will run your examples.
+
+Publishing is manual (CI only tests): after merging to `main`, run
+`scripts/publish.sh`, which renders from a fresh clone and pushes the book to the
+`gh-pages` branch.
 
 ## License
 
