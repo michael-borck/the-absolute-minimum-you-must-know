@@ -144,7 +144,7 @@ ground truth to lie about; it produces plausible text, and plausible is not the 
 true. Also marketed as "hallucination"; every chapter's "Spot the Confabulation"
 section trains you for it. See [TAMYMN-AI-Agents.md](TAMYMN-AI-Agents.md).
 
-### Constructor
+### Constructor (`__init__`)
 
 The method that runs when an object is created — `__init__` in Python — where you set
 up its starting attributes. `Dog("Rex")` calls it for you; you never call `__init__`
