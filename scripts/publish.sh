@@ -13,4 +13,5 @@ trap 'rm -rf "$tmp"' EXIT
 
 git clone -q "$remote" "$tmp/repo"
 cd "$tmp/repo"
-quarto publish gh-pages --no-prompt --no-browser
+deploy_id=$(awk '$1 == "id:" { print $2; exit }' _publish.yml)
+quarto publish gh-pages --id "$deploy_id" --no-prompt --no-browser
