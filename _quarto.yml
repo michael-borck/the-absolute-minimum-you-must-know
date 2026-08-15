@@ -7,7 +7,7 @@ project:
 book:
   title: "The Absolute Minimum You Must Know"
   author: "Michael Borck"
-  site-url: https://tamymn.borck.education
+  site-url: https://minimum.borck.education
   repo-url: https://github.com/michael-borck/the-absolute-minimum-you-must-know
   repo-actions: [edit, issue]
   search: true
