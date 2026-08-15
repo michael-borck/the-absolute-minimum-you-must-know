@@ -1,0 +1,106 @@
+# Welcome {.unnumbered}
+
+For every topic in software development there is a minimum viable set of ideas that
+unlocks everything else. Each chapter in this book is one page: read it in ten minutes,
+know enough to work — and, just as importantly in the age of AI, know enough to **direct
+the machine and catch it when it's wrong**.
+
+That second half is the point. An AI assistant will happily write your code, your
+queries, and your shell commands. What it cannot do is know what you meant, or check its
+own work with your interests at heart. The minimum you must know is no longer "enough to
+do everything by hand" — it is enough to *decompose a problem, give a precise
+instruction, and verify the result*. Every chapter here ends with exactly that: how to
+direct an AI at the topic, and a plausible-but-wrong AI answer for you to catch.
+
+::: {.callout-note}
+## This book checks its own examples
+Every Python example in these pages is a real [doctest](TAMYMN-Doctest.md), executed on
+every change by continuous integration. If an example were wrong, the build would fail.
+The book practices the verification it preaches.
+:::
+
+## Three trails through the same chapters
+
+Read cover to cover if you like — the parts are ordered deliberately — or follow the
+trail that matches why you're here:
+
+**I want to analyse data** →
+[Colab](TAMYMN-Colab.md) ·
+[Python](TAMYMN-Python.md) ·
+[Pandas](TAMYMN-Pandas.md) ·
+[Matplotlib](TAMYMN-Matplotlib.md) ·
+[Visualisation](TAMYMN-Visualisation.md) ·
+[SQLite](TAMYMN-SQLite.md)
+
+**I want to build software** →
+[Linux](TAMYMN-Linux.md) ·
+[Git](TAMYMN-Git.md) ·
+[Python](TAMYMN-Python.md) ·
+[Functions](TAMYMN-Functions.md) ·
+[OOP](TAMYMN-OOP.md) ·
+[Testing](TAMYMN-Testing.md)
+
+**I want to direct AI well** →
+[Computational Thinking](TAMYMN-Computational-Thinking.md) ·
+[Git](TAMYMN-Git.md) ·
+[Testing](TAMYMN-Testing.md) ·
+[Doctest](TAMYMN-Doctest.md) ·
+[AI Coding Agents](TAMYMN-AI-Agents.md)
+
+## Where should I start? {#diagnostic}
+
+Tick everything you can honestly do *right now, without looking anything up*. The list
+of chapters you still need appears below.
+
+```{=html}
+<div id="tamymn-quiz">
+  <style>
+    #tamymn-quiz label { display: block; margin: 0.3em 0; cursor: pointer; }
+    #tamymn-quiz button { margin-top: 0.8em; padding: 0.45em 1.1em; cursor: pointer;
+      border: 1px solid currentColor; border-radius: 6px; background: transparent;
+      color: inherit; font-size: 1em; }
+    #tamymn-result { margin-top: 1em; }
+  </style>
+  <form id="tamymn-form">
+    <label><input type="checkbox" data-doc="TAMYMN-Linux.html" data-name="Linux"> I can navigate, read files, and fix permissions in a Linux terminal — and escape vim.</label>
+    <label><input type="checkbox" data-doc="TAMYMN-Git.html" data-name="Git"> I can explain what <code>git add</code> does that <code>git commit</code> doesn't, and safely undo a pushed commit.</label>
+    <label><input type="checkbox" data-doc="TAMYMN-Python.html" data-name="Python"> I can explain why a mutable default argument is a bug.</label>
+    <label><input type="checkbox" data-doc="TAMYMN-Functions.html" data-name="Functions"> I can say what a function returns when it has no <code>return</code> statement.</label>
+    <label><input type="checkbox" data-doc="TAMYMN-Data-Structures.html" data-name="Data Structures"> I know when to reach for a dict or set instead of a list, and why it matters at scale.</label>
+    <label><input type="checkbox" data-doc="TAMYMN-Computational-Thinking.html" data-name="Computational Thinking"> I can decompose a fuzzy request into precise, ordered steps before writing any code.</label>
+    <label><input type="checkbox" data-doc="TAMYMN-OOP.html" data-name="OOP"> I can explain when a class earns its keep — and when a function is the better tool.</label>
+    <label><input type="checkbox" data-doc="TAMYMN-Testing.html" data-name="Testing"> I can write a test that would fail if the code were wrong (not one that always passes).</label>
+    <label><input type="checkbox" data-doc="TAMYMN-Doctest.html" data-name="Doctest"> I can turn a usage example into a doctest and run it.</label>
+    <label><input type="checkbox" data-doc="TAMYMN-Pandas.html" data-name="Pandas"> I can filter a DataFrame with a boolean mask without googling it.</label>
+    <label><input type="checkbox" data-doc="TAMYMN-SQLite.html" data-name="SQLite"> I can explain why SQL queries must be parameterised, and write one that is.</label>
+    <label><input type="checkbox" data-doc="TAMYMN-Jupyter.html" data-name="Jupyter"> I can explain the notebook hidden-state problem and how Restart &amp; Run All exposes it.</label>
+    <label><input type="checkbox" data-doc="TAMYMN-AI-Agents.html" data-name="AI Coding Agents"> Before letting an AI agent edit my code, I commit first — and I review its diff after.</label>
+  </form>
+  <button type="button" onclick="tamymnScore()">Show my reading list</button>
+  <div id="tamymn-result"></div>
+  <script>
+    function tamymnScore() {
+      const boxes = document.querySelectorAll('#tamymn-form input[type=checkbox]');
+      const missing = [...boxes].filter(b => !b.checked);
+      const out = document.getElementById('tamymn-result');
+      if (missing.length === 0) {
+        out.innerHTML = '<p><strong>Nothing to assign — you have the minimum.</strong> Read <a href="TAMYMN-AI-Agents.html">AI Coding Agents</a> anyway; it is the capstone.</p>';
+        return;
+      }
+      out.innerHTML = '<p><strong>Start with these ' + missing.length + ' chapter(s):</strong></p><ul>' +
+        missing.map(b => '<li><a href="' + b.dataset.doc + '">' + b.dataset.name + '</a></li>').join('') + '</ul>';
+    }
+  </script>
+</div>
+```
+
+## Using this book
+
+- **On the web** — you're here. Search is in the sidebar; every page has an edit link.
+- **In a real environment** — the repository ships a [dev container](https://github.com/michael-borck/the-absolute-minimum-you-must-know):
+  open it in GitHub Codespaces and you get a genuine Linux shell, Git, and Python with
+  every library these pages use — nothing to install, free tier, one click.
+- **As plain files** — every chapter is a standalone Markdown file readable straight on
+  GitHub. `git clone` and read in your editor.
+
+That's the tour. Pick a trail — or tick the boxes above and let the book pick for you.

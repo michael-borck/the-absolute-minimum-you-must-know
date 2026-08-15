@@ -1,0 +1,66 @@
+project:
+  type: book
+  output-dir: _book
+
+book:
+  title: "The Absolute Minimum You Must Know"
+  author: "Michael Borck"
+  repo-url: https://github.com/michael-borck/the-absolute-minimum-you-must-know
+  repo-actions: [edit, issue]
+  search: true
+  chapters:
+    - index.qmd
+    - part: "Thinking"
+      chapters:
+        - TAMYMN-Computational-Thinking.md
+        - TAMYMN-Algorithms.md
+        - TAMYMN-Data-Structures.md
+    - part: "Python"
+      chapters:
+        - TAMYMN-Python.md
+        - TAMYMN-Functions.md
+        - TAMYMN-FileIO.md
+        - TAMYMN-Functional-Programming.md
+        - TAMYMN-Event-Driven-Programming.md
+    - part: "Objects"
+      chapters:
+        - TAMYMN-OOP.md
+        - TAMYMN-Classes.md
+        - TAMYMN-Encapsulation.md
+        - TAMYMN-Abstraction.md
+        - TAMYMN-Inheritance.md
+        - TAMYMN-Polymorphism.md
+        - TAMYMN-Composition.md
+    - part: "Verification"
+      chapters:
+        - TAMYMN-Testing.md
+        - TAMYMN-Doctest.md
+        - TAMYMN-TDD.md
+    - part: "Data"
+      chapters:
+        - TAMYMN-Pandas.md
+        - TAMYMN-Matplotlib.md
+        - TAMYMN-Visualisation.md
+        - TAMYMN-SQLite.md
+        - TAMYMN-Web-Scraping.md
+    - part: "Tools"
+      chapters:
+        - TAMYMN-Linux.md
+        - TAMYMN-Git.md
+        - TAMYMN-Markdown.md
+        - TAMYMN-VSCode.md
+        - TAMYMN-Jupyter.md
+        - TAMYMN-Colab.md
+    - part: "Directing AI"
+      chapters:
+        - TAMYMN-AI-Agents.md
+  appendices:
+    - playground.qmd
+
+format:
+  live-html:
+    theme:
+      light: cosmo
+      dark: darkly
+    toc: true
+    code-copy: true

@@ -1,0 +1,58 @@
+# Playground {.unnumbered}
+
+Every cell on this page is a real Python interpreter running **in your browser** (via
+[Pyodide](https://pyodide.org) / WebAssembly) — nothing to install, nothing sent to a
+server. Edit the code and press *Run Code*. Refreshing the page resets everything.
+
+## Scratchpad
+
+Try anything from the chapters here:
+
+```{pyodide}
+prices = {"apple": 3.50, "banana": 1.20, "cherry": 8.00}
+affordable = [name for name, price in prices.items() if price < 5]
+print(sorted(affordable))
+```
+
+## Exercise: catch the confabulation
+
+This function was written by an AI assistant and "works" — until it doesn't. Run it
+as-is and look closely at the second call. Then fix it. (The trap is explained in
+[Python](TAMYMN-Python.md).)
+
+```{pyodide}
+def add_task(task, tasks=[]):
+    tasks.append(task)
+    return tasks
+
+print(add_task("write tests"))         # ['write tests']
+print(add_task("review the diff"))     # expected a fresh list... did you get one?
+```
+
+## Exercise: verify like the book does
+
+Every example in this book is a doctest. Here is the same machinery, in your hands:
+the docstring below *claims* a behaviour, and `doctest` checks it. One of the claims
+is wrong — run the cell, read the failure report, then fix either the code or the
+claim (both are legitimate fixes; deciding which is the *point* of verification).
+
+```{pyodide}
+def initials(name):
+    """Return the initials of a full name, uppercased.
+
+    >>> initials("grace hopper")
+    'GH'
+    >>> initials("Ada")
+    'A'
+    >>> initials("jean-luc picard")
+    'JP'
+    """
+    return "".join(part[0].upper() for part in name.split())
+
+import doctest
+doctest.run_docstring_examples(initials, {"initials": initials}, verbose=False)
+print("doctest run complete — silence means all claims held.")
+```
+
+That's the whole loop this book teaches: a precise claim, an automatic check, and a
+human deciding what the failure means. Take it with you.

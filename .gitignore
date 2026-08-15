@@ -1,1 +1,8 @@
 .ipynb_checkpoints/
+._*
+.DS_Store
+/_book/
+/.quarto/
+
+**/*.quarto_ipynb
+/playground_files/

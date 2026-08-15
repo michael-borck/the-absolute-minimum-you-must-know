@@ -1,120 +1,67 @@
-# the-absolute-minimum-you-must-know
+# The Absolute Minimum You Must Know
 
 <!-- BADGES:START -->
-[![cli-tool](https://img.shields.io/badge/-cli--tool-blue?style=flat-square)](https://github.com/topics/cli-tool) [![documentation](https://img.shields.io/badge/-documentation-blue?style=flat-square)](https://github.com/topics/documentation) [![git](https://img.shields.io/badge/-git-blue?style=flat-square)](https://github.com/topics/git) [![markdown](https://img.shields.io/badge/-markdown-blue?style=flat-square)](https://github.com/topics/markdown) [![programming-basics](https://img.shields.io/badge/-programming--basics-blue?style=flat-square)](https://github.com/topics/programming-basics) [![python](https://img.shields.io/badge/-python-3776ab?style=flat-square)](https://github.com/topics/python) [![self-directed-learning](https://img.shields.io/badge/-self--directed--learning-blue?style=flat-square)](https://github.com/topics/self-directed-learning) [![programming-career](https://img.shields.io/badge/-programming--career-blue?style=flat-square)](https://github.com/topics/programming-career) [![book](https://img.shields.io/badge/-book-795548?style=flat-square)](https://github.com/topics/book) [![assessment](https://img.shields.io/badge/-assessment-blue?style=flat-square)](https://github.com/topics/assessment)
+[![documentation](https://img.shields.io/badge/-documentation-blue?style=flat-square)](https://github.com/topics/documentation) [![python](https://img.shields.io/badge/-python-3776ab?style=flat-square)](https://github.com/topics/python) [![self-directed-learning](https://img.shields.io/badge/-self--directed--learning-blue?style=flat-square)](https://github.com/topics/self-directed-learning) [![book](https://img.shields.io/badge/-book-795548?style=flat-square)](https://github.com/topics/book) [![assessment](https://img.shields.io/badge/-assessment-blue?style=flat-square)](https://github.com/topics/assessment)
 <!-- BADGES:END -->
 
-A comprehensive collection of baseline knowledge assessments designed to help programmers evaluate and strengthen their understanding of fundamental programming concepts. This repository serves as both a learning resource and a self-assessment tool for essential topics including Git, Python, Markdown, and core computer science principles.
+[![Test docs and publish book](https://github.com/michael-borck/the-absolute-minimum-you-must-know/actions/workflows/publish.yml/badge.svg)](https://github.com/michael-borck/the-absolute-minimum-you-must-know/actions/workflows/publish.yml)
 
-## Description
+For every topic in software development there is a minimum viable set of ideas that
+unlocks everything else. Each `TAMYMN-*.md` file here is one page: read it in ten
+minutes, know enough to work — and know enough to **direct an AI at the topic and catch
+it when it's wrong**.
 
-Whether you're a beginner starting your programming journey or an experienced developer looking to solidify your foundational knowledge, this repository provides structured assessments and learning materials for critical programming concepts. Each assessment focuses on "the absolute minimum you must know" about specific topics to be effective in modern software development.
+That second half is the thesis. In the age of AI assistants, the minimum you must know
+is no longer "enough to do everything by hand" — it is enough to *decompose a problem,
+give a precise instruction, and verify the result*. Every chapter therefore ends with:
 
-## Topics Covered
+- **Directing the Machine** — a vague prompt vs an informed prompt, and why the informed
+  one works (it names the concepts on the page);
+- **Spot the Confabulation** — a plausible-but-wrong AI answer for you to catch;
+- **Where to Practice** and a **Quick Reference** table.
 
-- **Abstraction**: Understanding abstraction principles and implementation
-- **Algorithms**: Fundamental algorithmic thinking and problem-solving
-- **Classes**: Object-oriented programming concepts and best practices
-- **Google Colab**: Working with collaborative coding environments
-- **Composition**: Software composition patterns and techniques
-- **Computational Thinking**: Problem decomposition and logical reasoning
-- **Data Structures**: Essential data organization and manipulation concepts
-- **Doctest**: Documentation-driven testing methodologies
+## Read it
 
-## Installation
+- **As a book** — the rendered site (built with [Quarto](https://quarto.org)) lives on
+  GitHub Pages, with search, three guided trails, and a "where should I start?"
+  self-diagnostic on the front page.
+- **As plain files** — every chapter is a standalone Markdown file, readable right here
+  on GitHub. Start anywhere; each page stands alone.
+- **In a real environment** — open the repo in **GitHub Codespaces** (it ships a
+  [dev container](.devcontainer/devcontainer.json)): a genuine Linux shell, Git, Python
+  and every library the chapters use, zero install.
 
-This repository contains educational content that can be accessed directly through GitHub or cloned locally for offline use.
+## This book checks its own examples
 
-### Clone the Repository
-
-```bash
-git clone https://github.com/michael-borck/the-absolute-minimum-you-must-know.git
-cd the-absolute-minimum-you-must-know
-```
-
-### Prerequisites
-
-To get the most out of these assessments, ensure you have:
-
-- Python 3.6 or higher installed
-- Git version control system
-- A text editor or IDE of your choice
-- Access to Google Colab (for Colab-specific content)
-
-## Usage
-
-### Self-Assessment
-
-Each TAMYMN (The Absolute Minimum You Must Know) file represents a focused assessment on a specific topic:
+Every ```` ```python ```` block in every chapter is executed as a
+[doctest](TAMYMN-Doctest.md) by [`scripts/test_docs.py`](scripts/test_docs.py), and CI
+refuses to publish the book if a single example is wrong. The repository practices the
+verification it preaches:
 
 ```bash
-# Review a specific topic
-cat TAMYMN-Algorithms.md
-
-# Or open in your preferred editor
-vim TAMYMN-Classes.md
+pip install pandas matplotlib beautifulsoup4
+python3 scripts/test_docs.py            # run every example in every chapter
 ```
 
-### Structured Learning Path
+## Structure
 
-1. **Start with Computational Thinking** to establish problem-solving foundations
-2. **Progress to Data Structures and Algorithms** for core CS concepts  
-3. **Explore Classes and Composition** for object-oriented programming
-4. **Learn Doctest** for testing and documentation practices
-5. **Master Abstraction** for advanced design principles
-
-### Integration with Development Workflow
-
-Use these assessments as:
-
-- **Pre-interview preparation** materials
-- **Team onboarding** resources
-- **Knowledge gap identification** tools
-- **Continuous learning** checkpoints
-
-## File Structure
-
-```
-├── README.md                           # This file
-├── .gitignore                         # Git ignore patterns
-├── TAMYMN-Abstraction.md              # Abstraction principles assessment
-├── TAMYMN-Algorithms.md               # Algorithmic thinking evaluation
-├── TAMYMN-Classes.md                  # Object-oriented programming basics
-├── TAMYMN-Colab.md                    # Google Colab usage fundamentals
-├── TAMYMN-Composition.md              # Software composition concepts
-├── TAMYMN-Computational-Thinking.md   # Problem-solving methodologies
-├── TAMYMN-Data-Structures.md          # Data organization principles
-└── TAMYMN-Doctest.md                  # Documentation testing practices
-```
+| Part | Chapters |
+|---|---|
+| Thinking | Computational Thinking · Algorithms · Data Structures |
+| Python | Python · Functions · File IO · Functional Programming · Event-Driven Programming |
+| Objects | OOP · Classes · Encapsulation · Abstraction · Inheritance · Polymorphism · Composition |
+| Verification | Testing · Doctest · TDD |
+| Data | Pandas · Matplotlib · Visualisation · SQLite · Web Scraping |
+| Tools | Linux · Git · Markdown · VS Code · Jupyter · Colab |
+| Directing AI | AI Coding Agents |
 
 ## Contributing
 
-Contributions are welcome! If you have suggestions for additional topics, improvements to existing assessments, or corrections, please:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/new-assessment`)
-3. Commit your changes (`git commit -am 'Add new assessment topic'`)
-4. Push to the branch (`git push origin feature/new-assessment`)
-5. Create a Pull Request
-
-## Educational Philosophy
-
-This repository operates on the principle that there exists a minimum viable knowledge set for each programming concept that enables practical application and further learning. Rather than comprehensive coverage, these assessments focus on:
-
-- **Essential concepts** that unlock understanding
-- **Practical applications** over theoretical depth
-- **Self-directed learning** capabilities
-- **Real-world relevance** in professional development
-
-## Target Audience
-
-- Programming beginners seeking structured learning paths
-- Bootcamp students and graduates
-- Self-taught developers identifying knowledge gaps  
-- Educators looking for assessment materials
-- Teams establishing baseline knowledge requirements
-- Career changers entering the technology field
+Contributions welcome. Read [`STYLE.md`](STYLE.md) first — it defines the bar every
+chapter must meet (the required sections, the 120–200 line budget, and the rule that
+Python examples are passing doctests). `TAMYMN-Linux.md` and `TAMYMN-Git.md` are the
+exemplars. Then the usual: fork, branch, PR. CI will run your examples.
 
 ## License
 
-This project is open source and available under the [MIT License](LICENSE).
+MIT — see [LICENSE](LICENSE).
