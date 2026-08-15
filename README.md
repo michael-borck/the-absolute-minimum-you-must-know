@@ -47,6 +47,7 @@ python3 scripts/test_docs.py            # run every example in every chapter
 
 | Part | Chapters |
 |---|---|
+| — | Start Here (absolute-beginner on-ramp) |
 | Thinking | Computational Thinking · Algorithms · Data Structures |
 | Python | Python · Functions · File IO · Functional Programming · Event-Driven Programming |
 | Objects | OOP · Classes · Encapsulation · Abstraction · Inheritance · Polymorphism · Composition |
@@ -54,6 +55,7 @@ python3 scripts/test_docs.py            # run every example in every chapter
 | Data | Pandas · Matplotlib · Visualisation · SQLite · Web Scraping |
 | Tools | Linux · Git · Markdown · VS Code · Jupyter · Colab |
 | Directing AI | AI Coding Agents |
+| Appendices | Glossary · in-browser Python Playground |
 
 ## Contributing
 

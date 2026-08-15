@@ -1,13 +1,13 @@
 # Event-Driven Programming: The Absolute Minimum You Must Know
 
-Every GUI, web server, and JavaScript page runs on one idea turned inside-out: your code
+Every GUI, web [server](GLOSSARY.md#server), and JavaScript page runs on one idea turned inside-out: your code
 stops being the driver and becomes a set of functions waiting to be called. Grasp that
 inversion, plus callbacks and a ten-line event loop, and every framework's documentation
 starts making sense — all on this page.
 
 ## The Inversion: You Don't Call the Framework — It Calls You
 
-A script you've written so far is a **recipe**: it runs top to bottom, in the order you
+A [script](GLOSSARY.md#script) you've written so far is a **recipe**: it runs top to bottom, in the order you
 wrote, and then it ends. An event-driven program is a **reception desk**: it starts, then
 *waits*, and things happen in whatever order the outside world decides — a click, a
 request, a key press. You don't write the order of events; you write **handlers** (what
@@ -36,7 +36,7 @@ below.
 
 ## An Event Loop You Can Hold in Your Head
 
-Strip any framework to its skeleton and you find this — a dict mapping event names to
+Strip any framework to its skeleton and you find this — a [dict](GLOSSARY.md#dictionary) mapping event names to
 handler lists, and a dispatch function:
 
 ```python
@@ -81,9 +81,9 @@ different spelling — the browser owns the loop. Same model, three dialects.
 
 Handlers are called with just the event's data, so where does state between events live
 — a click counter, the logged-in user? The lazy answer is module-level `global`
-variables, and event code rots exactly this way: every handler reads and writes shared
+[variables](GLOSSARY.md#variable), and event code rots exactly this way: every handler reads and writes shared
 globals until nothing can be tested or reasoned about alone. The fix is to give state a
-home the handler carries with it — a closure (below) or a class with methods as handlers:
+home the handler carries with it — a closure (below) or a [class](GLOSSARY.md#class) with [methods](GLOSSARY.md#method) as handlers:
 
 ```python
 >>> def make_click_counter():
@@ -104,7 +104,7 @@ buttons to one global and you'll appreciate the difference.
 
 ## Directing the Machine
 
-The informed prompt names the model: which events, which handlers, where state lives.
+The informed [prompt](GLOSSARY.md#prompt-ai) names the model: which events, which handlers, where state lives.
 Frameworks are boilerplate-heavy, so AIs write them well — *if* you specify the wiring
 instead of letting the AI guess it (and its guess will use globals).
 

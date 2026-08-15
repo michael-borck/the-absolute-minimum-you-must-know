@@ -38,6 +38,16 @@ whatever you happen to produce.
 8. **Closing line**: "That covers the absolute minimum! ..." — one sentence on what the
    reader can now do, and that everything else is discoverable from here.
 
+## Jargon and the Glossary
+
+Use each domain's real terminology — the words are part of the minimum. Don't define
+basic terms inline (that's what `GLOSSARY.md` is for); instead, link the **first
+occurrence** of a glossary term in your doc to its anchor, e.g.
+`[staging area](GLOSSARY.md#staging-area)`. Link only in prose (never inside code
+blocks or the Quick Reference table), and don't link terms your own doc teaches — your
+doc is the better definition. If a term you lean on is missing from the glossary, add
+it there.
+
 ## Code examples
 
 - **Python examples are doctests and they must pass.** Write them as interpreter

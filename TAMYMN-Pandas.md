@@ -1,12 +1,12 @@
 # Pandas: The Absolute Minimum You Must Know
 
-Pandas looks like a thousand methods, but daily use rests on one data structure, one
-selection idiom, and one habit — all on this page. Master `.loc` with a boolean mask and
-the rest of the library becomes variations on a theme.
+Pandas looks like a thousand [methods](GLOSSARY.md#method), but daily use rests on one data structure, one
+selection idiom, and one habit — all on this page. Master `.loc` with a [boolean](GLOSSARY.md#boolean) mask and
+the rest of the [library](GLOSSARY.md#library) becomes variations on a theme.
 
 ## The Mental Model: A DataFrame Is a Dict of Columns
 
-A **DataFrame** is a table: a dictionary whose keys are column names and whose values are
+A **DataFrame** is a table: a [dictionary](GLOSSARY.md#dictionary) whose keys are column names and whose values are
 **Series** — one-dimensional arrays that all share the same row labels (the **index**, the
 bold numbers down the left). That's why you build one from a dict literal, and why
 `df['mark']` gets you a column, not a row:
@@ -34,7 +34,7 @@ df = pd.DataFrame({
 
 In real work the dict literal is replaced by `pd.read_csv('marks.csv')` — everything after
 that line is identical. Operations are **vectorised**: `df['mark'] + 5` adds 5 to every
-row at once. If you're writing a `for` loop over rows, you're almost always fighting the
+row at once. If you're writing a `for` [loop](GLOSSARY.md#loop) over rows, you're almost always fighting the
 library instead of using it.
 
 ## The Habit: Look at Your Data First
@@ -51,7 +51,7 @@ Every analysis starts the same way, before any cleverness:
 ```
 
 Then `df.info()` (column types and missing-value counts — the number-that-loaded-as-text
-bug lives here) and `df.describe()` (summary statistics — impossible values like a mark
+[bug](GLOSSARY.md#bug) lives here) and `df.describe()` (summary statistics — impossible values like a mark
 of 910 jump out). Thirty seconds of looking saves hours of debugging a "clean" analysis
 built on dirty data.
 
@@ -128,7 +128,7 @@ always.
 
 ## Directing the Machine
 
-An AI writes pandas fluently, but only an informed prompt — one that names columns, masks,
+An AI writes pandas fluently, but only an informed [prompt](GLOSSARY.md#prompt-ai) — one that names columns, masks,
 `.loc`, and `groupby` — gets you code you can verify instead of code that merely runs.
 Vague prompts invite row loops and chained indexing.
 
@@ -171,7 +171,7 @@ The fix is one line: `df.loc[df['mark'] > 100, 'mark'] = 100`.
 
 ## Where to Practice
 
-- **[100 pandas puzzles](https://github.com/ajcr/100-pandas-puzzles)** — a free notebook
+- **[100 pandas puzzles](https://github.com/ajcr/100-pandas-puzzles)** — a free [notebook](GLOSSARY.md#notebook)
   of short exercises graded from easy to hard; the first thirty drill exactly the
   selection and groupby idioms on this page. No signup.
 - **[10 minutes to pandas](https://pandas.pydata.org/docs/user_guide/10min.html)** — the

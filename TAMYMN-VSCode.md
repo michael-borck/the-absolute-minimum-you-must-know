@@ -25,17 +25,17 @@ submenu Y", you can ignore it: palette, type three words, Enter. Its sibling **C
 ## Open the Folder, Not the File
 
 Beginners double-click one `.py` file and wonder why nothing works well. **Always open the
-project's folder** (`File > Open Folder...`, or `code .` from a terminal in that
+project's folder** (`File > Open Folder...`, or `code .` from a [terminal](GLOSSARY.md#terminal) in that
 directory). The open folder is your **workspace**, and it's what gives you the features
-that matter: file-wide search (Cmd/Ctrl-Shift-F), Git integration, relative imports and
-paths resolving correctly, and per-project settings. A lone file has none of that. If the
+that matter: file-wide search (Cmd/Ctrl-Shift-F), [Git](GLOSSARY.md#git) integration, relative [imports](GLOSSARY.md#import) and
+[paths](GLOSSARY.md#path) resolving correctly, and per-project settings. A lone file has none of that. If the
 sidebar's file tree is empty, you opened a file, not a folder — fix that first.
 
 ## The Integrated Terminal
 
 **Ctrl-`** (backtick) opens a real terminal *inside* the editor, already `cd`'d into your
 workspace folder. It's the same shell as your system terminal — everything from
-`TAMYMN-Linux.md` applies. Run your scripts, run `git`, run tests, all without leaving the
+`TAMYMN-Linux.md` applies. Run your [scripts](GLOSSARY.md#script), run `git`, run [tests](GLOSSARY.md#test), all without leaving the
 window. This matters for a subtle reason: the terminal is where you *verify* — the editor
 shows what code says, the terminal shows what code does.
 
@@ -47,7 +47,7 @@ gives you error squiggles, autocompletion, go-to-definition, and the Run button.
 stop. Resist collecting extensions — each one is startup time and noise, and most "top 10
 extensions" lists are solving problems you don't have yet.
 
-One habit the Python extension demands: check the **interpreter** shown in the status bar
+One habit the Python extension demands: check the **[interpreter](GLOSSARY.md#interpreter)** shown in the status bar
 (bottom of the window). That's which Python environment runs your code and resolves your
 imports — if VS Code can't find a package you *know* you installed, you almost certainly
 installed it into a different environment than the one selected. `Python: Select

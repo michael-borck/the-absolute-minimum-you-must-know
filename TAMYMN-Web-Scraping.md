@@ -2,13 +2,13 @@
 
 Web scraping is two separate jobs — *fetching* a page and *parsing* it — and beginners
 fail by welding them together. Effective scraping rests on one mental model (HTML is a
-tree), one library for walking it (BeautifulSoup), and a short code of manners — all on
+tree), one [library](GLOSSARY.md#library) for walking it (BeautifulSoup), and a short code of manners — all on
 this page.
 
 ## Step Zero: Check for an API First
 
-Before scraping anything, spend five minutes looking for an **API** — many sites offer
-their data as clean JSON at a documented URL (look for "API" or "developers" in the
+Before scraping anything, spend five minutes looking for an **[API](GLOSSARY.md#api)** — many sites offer
+their data as clean [JSON](GLOSSARY.md#json) at a documented [URL](GLOSSARY.md#url) (look for "API" or "developers" in the
 footer, or try the site name + "API" in a search). An API is faster, legal by design,
 and doesn't shatter when the site changes its layout. Scraping is the fallback for when
 no API exists, not the default.
@@ -81,7 +81,7 @@ Two ways to hunt. **`find` / `find_all`** take a tag name plus attribute filters
 
 The workflow for a real page: open it in the browser, right-click the data you want,
 **Inspect**, and read off the tags and classes — then write the selector. A list of
-extracted tuples drops straight into a DataFrame (`TAMYMN-Pandas.md`) for the analysis
+extracted [tuples](GLOSSARY.md#tuple) drops straight into a [DataFrame](GLOSSARY.md#dataframe) (`TAMYMN-Pandas.md`) for the analysis
 step.
 
 ## Fetching: the Other Half
@@ -100,7 +100,7 @@ soup = BeautifulSoup(response.text, 'html.parser')
 `response.text` is exactly the kind of string `page` was — from there on, nothing
 changes. Which suggests the professional habit: **save the HTML to a file once, then
 develop your parser against the saved copy.** You'll re-run the parser fifty times while
-you get the selectors right; hitting the server fifty times is slow for you and rude to
+you get the selectors right; hitting the [server](GLOSSARY.md#server) fifty times is slow for you and rude to
 them.
 
 ## Being Polite (and Legal)
@@ -117,7 +117,7 @@ them.
 ## Directing the Machine
 
 An AI can't see the page you're scraping — so the single highest-value move is pasting a
-*sample of the actual HTML* into the prompt and naming the tree coordinates (tags,
+*sample of the actual HTML* into the [prompt](GLOSSARY.md#prompt-ai) and naming the tree coordinates (tags,
 classes) you found with Inspect. Otherwise it guesses selectors for a page it imagines.
 
 Vague:

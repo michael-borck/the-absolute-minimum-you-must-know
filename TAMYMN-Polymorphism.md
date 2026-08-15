@@ -1,13 +1,13 @@
 # Polymorphism in Python: The Absolute Minimum You Must Know
 
 Polymorphism is one sentence — *the same call, different behaviour depending on the
-object* — and the rest of this page is what that buys you and the smell that tells you
+[object](GLOSSARY.md#object)* — and the rest of this page is what that buys you and the smell that tells you
 you're doing it by hand. The running example is a notification sender, because "send this
 alert somehow" is polymorphism's natural habitat.
 
 ## Same Call, Different Behaviour
 
-Three unrelated classes, one shared method shape:
+Three unrelated [classes](GLOSSARY.md#class), one shared [method](GLOSSARY.md#method) shape:
 
 ```python
 class EmailSender:
@@ -45,8 +45,8 @@ enforced, give the senders an ABC — that trade-off is TAMYMN-Abstraction.md's 
 
 ## You Already Use It Everywhere
 
-`len("abc")`, `len([1, 2])`, `for x in anything`, `a + b` on ints or strings — the
-built-ins are polymorphic across types via dunder methods (`__len__`, `__iter__`,
+`len("abc")`, `len([1, 2])`, `for x in anything`, `a + b` on [ints](GLOSSARY.md#integer) or [strings](GLOSSARY.md#string) — the
+built-ins are polymorphic across [types](GLOSSARY.md#type) via dunder methods (`__len__`, `__iter__`,
 `__add__`). Your classes join in the same way:
 
 ```python
@@ -78,7 +78,7 @@ def alert(sender, to, message):
 ```
 
 This *runs*, but it has moved every class's behaviour out of the classes and into one
-brittle function: adding a channel now means editing `alert` (and every other
+brittle [function](GLOSSARY.md#function): adding a channel now means editing `alert` (and every other
 isinstance-chain in the codebase — they breed), the truncation rule lives far from
 `SmsSender`, and any sender the chain doesn't list falls off the end and returns `None`
 silently. An isinstance chain over your own classes is the machine telling you a method
@@ -89,7 +89,7 @@ types you control are the smell.)
 
 ## Directing the Machine
 
-LLMs produce isinstance chains readily — they're the locally-obvious completion. Name the
+[LLMs](GLOSSARY.md#llm) produce isinstance chains readily — they're the locally-obvious completion. Name the
 polymorphic design you want and forbid the smell.
 
 Vague:

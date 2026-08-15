@@ -69,7 +69,7 @@ nano answers.md
 ```
 
 Type normally. **Ctrl-O** then Enter saves ("write **O**ut"); **Ctrl-X** exits. The shortcuts
-are printed along the bottom of the screen — `^` means Ctrl. That's the whole editor.
+are printed along the bottom of the screen — `^` means Ctrl. That's the whole [editor](GLOSSARY.md#editor).
 
 ## Everyday Housekeeping
 

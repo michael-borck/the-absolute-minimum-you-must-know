@@ -32,11 +32,11 @@ say, average temperatures by city — is not a chart, it's an accident.)
 
 ## Label Your Axes — With Units
 
-An unlabelled axis makes the chart unfalsifiable: "sales" of *what*, in *which units*,
+An unlabelled [axis](GLOSSARY.md#axis) makes the chart unfalsifiable: "sales" of *what*, in *which units*,
 over *what period*? The non-negotiable minimum is an x-label, a y-label **with units**,
 and a title — and the strongest titles state the takeaway ("Rent rose 12% in 2025"), not
 the topic ("Rent data"). In matplotlib that's three `set_*` calls, and because Axes are
-objects you can verify them in tests:
+[objects](GLOSSARY.md#object) you can verify them in [tests](GLOSSARY.md#test):
 
 ```python
 >>> import matplotlib.pyplot as plt
@@ -60,7 +60,7 @@ and Sydney's bar towers at four times Perth's height — a visual 300% shouting 
 real 3%. The rules that keep you honest:
 
 - **Bar charts start at zero, always.** A bar's length *is* its value; cutting the axis
-  cuts the truth. (Matplotlib does the right thing by default, as the doctest above
+  cuts the truth. (Matplotlib does the right thing by default, as the [doctest](GLOSSARY.md#doctest) above
   shows — truncation requires a deliberate `ax.set_ylim(400, ...)`.)
 - **Line charts may zoom** — a trend lives in the slope, not the bar length — but say so
   visibly when the baseline isn't zero.
@@ -69,7 +69,7 @@ real 3%. The rules that keep you honest:
 
 ## Directing the Machine
 
-An AI will happily generate *a* chart for any data you paste; only a prompt that names
+An AI will happily generate *a* chart for any data you paste; only a [prompt](GLOSSARY.md#prompt-ai) that names
 the question type, the encoding, and the honesty rules gets you the *right* chart. You
 are the one who knows what question the audience is asking.
 

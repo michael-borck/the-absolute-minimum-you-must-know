@@ -47,10 +47,33 @@ trail that matches why you're here:
 [Doctest](TAMYMN-Doctest.md) ·
 [AI Coding Agents](TAMYMN-AI-Agents.md)
 
+**I'm brand new to all of this** →
+[Start Here](TAMYMN-Start-Here.md) ·
+[Python](TAMYMN-Python.md) ·
+[Functions](TAMYMN-Functions.md) ·
+[Linux](TAMYMN-Linux.md) — and keep the [Glossary](GLOSSARY.md) open in a second tab.
+
+## Reading with an AI beside you
+
+These pages use each domain's real jargon on purpose — the words are part of the
+minimum, because they're how you'll search, read documentation, and direct an AI. When
+you hit a term you don't know: first the [Glossary](GLOSSARY.md); for anything beyond
+it, ask an AI chat — *precisely*. The prompt shape that works:
+
+> "In the context of **Git**, what does **'staging'** mean? I understand files and
+> folders but not version control. Two sentences and a tiny example."
+
+Name the context, say what you already know, and size the answer. That's
+[directing the machine](TAMYMN-AI-Agents.md) applied to your own learning — and the
+same caution applies: explanations can be confabulated too, so check what the AI tells
+you against the page in front of you.
+
 ## Where should I start? {#diagnostic}
 
 Tick everything you can honestly do *right now, without looking anything up*. The list
-of chapters you still need appears below.
+of chapters you still need appears below. (If most of these statements don't even
+*parse* yet, that's fine — skip the quiz and go straight to
+[Start Here](TAMYMN-Start-Here.md).)
 
 ```{=html}
 <div id="tamymn-quiz">

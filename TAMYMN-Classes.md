@@ -1,7 +1,7 @@
 # Classes in Python: The Absolute Minimum You Must Know
 
 Everything about Python classes follows from one model — a class is a blueprint, an
-instance is one object built from it — plus about five pieces of mechanics, all on this
+instance is one [object](GLOSSARY.md#object) built from it — plus about five pieces of mechanics, all on this
 page. The running example is a bank account, because it's the smallest thing with both
 data and rules.
 
@@ -32,14 +32,14 @@ class BankAccount:
 0
 ```
 
-Calling the class like a function (`BankAccount("Amira", 100)`) builds a fresh instance
+Calling the class like a [function](GLOSSARY.md#function) (`BankAccount("Amira", 100)`) builds a fresh instance
 and runs `__init__` on it. `__init__` does not *create* the object — Python has already
 made an empty one — it *initialises* it, stamping on the attributes this instance starts
 with.
 
 ## `self` Is Not Magic
 
-`self` is just the instance, passed as the first argument automatically:
+`self` is just the instance, passed as the first [argument](GLOSSARY.md#argument) automatically:
 
 ```python
 >>> acct = BankAccount("Amira", 100)
@@ -50,7 +50,7 @@ with.
 ```
 
 That's the whole trick. `acct.deposit(25)` means "run the blueprint's `deposit` function
-*on this object*". It also explains the classic error message
+*on this object*". It also explains the classic [error message](GLOSSARY.md#error-message)
 `deposit() takes 2 positional arguments but 3 were given` — you forgot `self` in the
 `def`, so your own arguments shifted into its place.
 
@@ -67,9 +67,9 @@ That's the whole trick. `acct.deposit(25)` means "run the blueprint's `deposit` 
 ```
 
 Rule of thumb: constants shared by every instance go on the class; everything that varies
-per object gets set on `self` in `__init__`. Never put a **mutable** value (a list, a
-dict) on the class "as a default" — every instance would share the same one (see the
-confabulation below).
+per object gets set on `self` in `__init__`. Never put a **mutable** value (a [list](GLOSSARY.md#list), a
+[dict](GLOSSARY.md#dictionary)) on the class "as a default" — every instance would share the same one (see the
+[confabulation](GLOSSARY.md#confabulation) below).
 
 ## `__repr__`: Make Your Objects Legible
 
@@ -114,7 +114,7 @@ dataclass.
 
 When you ask an AI for a class, name the parts from this page — which attributes are
 per-instance, what the repr should look like, whether a dataclass suffices — or you'll
-get generic boilerplate with getters, setters, and inheritance you never asked for.
+get generic boilerplate with getters, setters, and [inheritance](GLOSSARY.md#inheritance) you never asked for.
 
 Vague:
 

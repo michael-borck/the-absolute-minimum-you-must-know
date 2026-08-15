@@ -6,7 +6,7 @@ names, core types, truthiness, `for`/`if`, comprehensions, imports, and one famo
 
 ## Variables Are Names, Not Boxes
 
-A Python variable is a **name bound to an object**, not a box containing a value.
+A Python variable is a **name bound to an [object](GLOSSARY.md#object)**, not a box containing a value.
 Assignment never copies; it points another name at the same object:
 
 ```python
@@ -32,7 +32,7 @@ That one model explains half of Python's surprises. Want an actual copy? Ask for
 'Ada'
 ```
 
-Lists hold sequences you'll loop over; dicts hold things you look up by key. Those two plus
+Lists hold sequences you'll [loop](GLOSSARY.md#loop) over; dicts hold things you look up by key. Those two plus
 strings do 90% of everyday work. `None` is the "no value here" object — test with `is None`.
 
 ## f-strings: How You Build Text
@@ -102,13 +102,13 @@ whenever you're transforming a collection.
 4.0
 ```
 
-`import math` brings in the module and you use `math.sqrt`; `from pathlib import Path`
+`import math` brings in the [module](GLOSSARY.md#module) and you use `math.sqrt`; `from pathlib import Path`
 pulls one name out. Avoid `from module import *` — nobody can tell where names came from.
 
 ## Script vs REPL
 
 The `>>>` blocks on this page are **REPL** transcripts — run `python3` alone and you get a
-prompt: type an expression, see its value. It's your scratchpad. Real programs live in files
+[prompt](GLOSSARY.md#prompt-shell): type an [expression](GLOSSARY.md#expression), see its value. It's your scratchpad. Real programs live in files
 — `python3 report.py` runs top to bottom, printing nothing you didn't `print()`. The line
 you'll see everywhere:
 
@@ -119,7 +119,7 @@ if __name__ == "__main__":   # true only when THIS file is the one being run,
 
 ## The Gotcha: Mutable Default Arguments
 
-Default values are evaluated **once**, when the function is defined — not on every call.
+Default values are evaluated **once**, when the [function](GLOSSARY.md#function) is defined — not on every call.
 A mutable default is therefore shared between calls:
 
 ```python
@@ -180,7 +180,7 @@ corrupts the shared defaults for the whole program: `DEFAULT_SETTINGS["verbose"]
 - **[futurecoder](https://futurecoder.io)** — free, no-signup course that runs Python in
   your browser, with a debugger that shows what each name points at.
 - **[Exercism's Python track](https://exercism.org/tracks/python)** — free small exercises
-  with automated tests and human mentoring; ideal once the syntax feels stable.
+  with automated tests and human mentoring; ideal once the [syntax](GLOSSARY.md#syntax) feels stable.
 
 ## Quick Reference
 

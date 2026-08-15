@@ -1,6 +1,6 @@
 # AI Coding Agents: The Absolute Minimum You Must Know
 
-An AI coding agent can edit your files, run your tests, and build features while you
+An AI coding agent can edit your files, run your [tests](GLOSSARY.md#test), and build features while you
 watch. Working with one safely rests on a single division of labour — **you direct, it
 implements, you verify** — and this page is the operating manual for all three parts.
 It's also the capstone of every other TAMYMN doc: they exist so you can do the first and
@@ -20,11 +20,11 @@ call really happens, to your real files. Two consequences fall straight out of t
   confidently (that's what "confabulation" sections across this repo train you for).
 - **"Done" is the agent's opinion.** It stops when its own checks pass — which is not
   the same as correct. Establishing correctness is your job, and it's checkable, not
-  vibes: the diff and the tests.
+  vibes: the [diff](GLOSSARY.md#diff) and the tests.
 
 ## Before You Let It Loose: Commit
 
-From `TAMYMN-Git.md`: commit before you experiment — and an agent session *is* an
+From `TAMYMN-Git.md`: [commit](GLOSSARY.md#commit) before you experiment — and an agent session *is* an
 experiment. Start every session from a clean working tree:
 
 ```
@@ -47,18 +47,18 @@ git diff                 # read EVERY change — the agent's report is a claim, 
 pytest                   # run the tests YOURSELF, in your terminal — don't take "all green" on trust
 ```
 
-Then the standard that decides whether the change lands: **never merge what you can't
+Then the standard that decides whether the change lands: **never [merge](GLOSSARY.md#merge) what you can't
 explain.** For each hunk of the diff, you should be able to say what it does and why it's
 needed. Watch especially for the classic agent shortcuts: tests edited or skipped to make
 them pass, error handling that swallows the error, hard-coded values where logic should
 be, and dependencies added casually. Tests are your leverage here (`TAMYMN-Testing.md`):
-a good test suite is a machine for verifying agent work at scale — which is why "write
+a good [test suite](GLOSSARY.md#test-suite) is a machine for verifying agent work at scale — which is why "write
 the failing test first, then let the agent make it pass" is one of the strongest agent
 workflows there is.
 
 ## Standing Instructions: AGENTS.md / CLAUDE.md
 
-Agents look for an instruction file in your repo root — `AGENTS.md` by convention, or a
+Agents look for an instruction file in your [repo](GLOSSARY.md#repository) root — `AGENTS.md` by convention, or a
 tool-specific name like `CLAUDE.md` — and read it at the start of every session. Anything
 you'd otherwise repeat in every prompt goes there:
 
@@ -146,11 +146,11 @@ minimum a question back to you about which behaviour is intended.
 ## Where to Practice
 
 - **[Gemini CLI](https://github.com/google-gemini/gemini-cli)** — a free, open-source
-  terminal agent with a generous no-cost tier; a real agent loop (read files, run
+  [terminal](GLOSSARY.md#terminal) agent with a generous no-cost tier; a real agent loop (read files, run
   commands, edit) to practice the commit → prompt → diff → test cycle on.
-- **GitHub Copilot's free tier in VS Code** — agent-style edits inside the editor from
+- **GitHub Copilot's free tier in VS Code** — agent-style edits inside the [editor](GLOSSARY.md#editor) from
   `TAMYMN-VSCode.md`, no payment details needed.
-- Whatever agent you use, practice on a **fresh clone of your own project** — real
+- Whatever agent you use, practice on a **fresh [clone](GLOSSARY.md#clone) of your own project** — real
   enough to matter, committed so nothing can be lost. Prompt, `git diff`, verify, revert,
   re-prompt: the loop is the skill.
 

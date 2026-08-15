@@ -7,8 +7,8 @@ TAMYMN-Inheritance.md, TAMYMN-Polymorphism.md, TAMYMN-Composition.md).
 
 ## The One Idea: State and Behaviour Travel Together
 
-Without classes, data and the functions that understand it drift apart. A to-do list is a
-list of dicts, and `add_task`, `complete_task`, `remaining_tasks` are loose functions that
+Without [classes](GLOSSARY.md#class), data and the [functions](GLOSSARY.md#function) that understand it drift apart. A to-do list is a
+list of [dicts](GLOSSARY.md#dictionary), and `add_task`, `complete_task`, `remaining_tasks` are loose functions that
 each must be told (and must trust) what shape that data has:
 
 ```python
@@ -58,7 +58,7 @@ this idea taken further. You've been using it all along: `"abc".upper()` and
 does this by convention (`_name` means "internal") and by properties, not by enforced
 `private` keywords. See TAMYMN-Encapsulation.md.
 
-**Abstraction** — callers depend on *what an object can do* (its interface), never on how
+**Abstraction** — callers depend on *what an object can do* (its [interface](GLOSSARY.md#interface)), never on how
 it does it. You can swap a CSV reader for a JSON reader if both offer `.read()`. See
 TAMYMN-Abstraction.md.
 
@@ -80,17 +80,17 @@ there isn't, a class is ceremony:
 
 - **A function that takes input and returns output** — keep it a function. Python is not
   Java; code doesn't have to live in a class.
-- **A group of related constants or helpers** — that's a module. Modules already give you
-  a namespace for free, without instantiating anything.
+- **A group of related constants or helpers** — that's a [module](GLOSSARY.md#module). Modules already give you
+  a [namespace](GLOSSARY.md#namespace) for free, without instantiating anything.
 - **A bag of data with no behaviour** — a dict, a `namedtuple`, or a `dataclass`
   (see TAMYMN-Classes.md) is lighter and clearer.
 
-The smell to watch for: a class whose methods never touch `self`. It's bundling nothing.
+The smell to watch for: a class whose [methods](GLOSSARY.md#method) never touch `self`. It's bundling nothing.
 
 ## Directing the Machine
 
 AI assistants over-produce OOP — ask for "a program" and you often get a class explosion.
-The informed prompt states which pillar you want and where the boundaries are, in the
+The informed [prompt](GLOSSARY.md#prompt-ai) states which pillar you want and where the boundaries are, in the
 vocabulary on this page.
 
 Vague:
@@ -141,7 +141,7 @@ travelling together; where there's no state, a plain function is the professiona
 
 - **[Python Tutor](https://pythontutor.com)** — paste any class-based snippet and step
   through it; you *see* objects as boxes with attribute arrows, which makes `self` and
-  instances concrete. No signup.
+  [instances](GLOSSARY.md#instance) concrete. No signup.
 - **[The official tutorial, chapter 9](https://docs.python.org/3/tutorial/classes.html)** —
   the canonical short read on classes, straight from the source and always current.
 

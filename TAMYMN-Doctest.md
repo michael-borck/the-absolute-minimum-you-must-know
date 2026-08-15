@@ -1,6 +1,6 @@
 # Doctest: The Absolute Minimum You Must Know
 
-A doctest is an example that is also a test: you paste an interpreter session into a
+A doctest is an example that is also a test: you paste an [interpreter](GLOSSARY.md#interpreter) session into a
 docstring, and Python re-runs it to check the outputs still hold. The whole tool is one
 idea and three rules of transcript-writing — all on this page.
 
@@ -9,7 +9,7 @@ idea and three rules of transcript-writing — all on this page.
 Documentation lies. Not on the day it's written — later, when the code changes and the
 examples don't. Doctest kills that failure mode: because the example *is* a test, an
 example that stops being true becomes a build failure instead of a trap for the next
-reader. That's the honest-documentation guarantee, and no comment or README paragraph can
+reader. That's the honest-documentation guarantee, and no [comment](GLOSSARY.md#comment) or [README](GLOSSARY.md#readme) paragraph can
 offer it.
 
 A doctest lives in a docstring and looks exactly like the interactive interpreter:
@@ -27,21 +27,21 @@ def fahrenheit(celsius):
     return celsius * 9 / 5 + 32
 ```
 
-Lines starting `>>>` are statements to run (`...` continues a multi-line one); the lines
+Lines starting `>>>` are [statements](GLOSSARY.md#statement) to run (`...` continues a multi-line one); the lines
 below each are the expected output, matched **exactly** — same text, same spacing.
 
 ## Writing a Transcript
 
 The reliable way to write one is not to write it at all: run the code in a real
 interpreter and paste the session. Everything doctest-shaped in this page is live, so the
-rules below demonstrate themselves. First the function:
+rules below demonstrate themselves. First the [function](GLOSSARY.md#function):
 
 ```python
 def fahrenheit(celsius):
     return celsius * 9 / 5 + 32
 ```
 
-**Rule 1 — expressions are compared against their `repr`.** That's why strings show their
+**Rule 1 — [expressions](GLOSSARY.md#expression) are compared against their `repr`.** That's why strings show their
 quotes, and why `print` output doesn't:
 
 ```python
@@ -57,7 +57,7 @@ Ada
 Mixing these up is *the* classic doctest stumble — expecting `Ada` from a bare expression
 fails on the missing quotes.
 
-**Rule 2 — exceptions get a stub traceback.** Write the header line, a literal `...` for
+**Rule 2 — [exceptions](GLOSSARY.md#exception) get a stub traceback.** Write the header line, a literal `...` for
 the messy middle, then the final error line:
 
 ```python
@@ -96,16 +96,16 @@ Silence-on-success surprises people: no news is a pass. Add `-v` when you want p
 Doctest wins wherever a human will read the example anyway: docstrings of pure functions,
 tutorials, READMEs. One artefact serves as spec, documentation, and test, and it can't
 drift. It loses everywhere else: no fixtures or parametrisation, clumsy with setup and
-side effects, brittle with floats and volatile reprs, and its failure output is thin. The
+side effects, brittle with [floats](GLOSSARY.md#float) and volatile reprs, and its failure output is thin. The
 working split: **doctest for the contract you show humans, pytest for the deep coverage**
 — a couple of honest examples per function, and the exhaustive edge-case grid in
 `test_*.py`.
 
 ## The Meta-Point: This Page Is Testing Itself
 
-This very repository eats its own cooking: `scripts/test_docs.py` executes **every**
+This very [repository](GLOSSARY.md#repository) eats its own cooking: `scripts/test_docs.py` executes **every**
 `python` block in these documents — blocks containing `>>>` run as doctests, the rest are
-exec'd into the same per-file namespace — and CI fails if any example is wrong. The
+exec'd into the same per-file [namespace](GLOSSARY.md#namespace) — and [CI](GLOSSARY.md#ci-continuous-integration) fails if any example is wrong. The
 `fahrenheit` transcripts above didn't just look right, they *ran*. That's the doctest idea
 scaled up to a whole book: it cannot lie about its own examples.
 
@@ -113,7 +113,7 @@ scaled up to a whole book: it cannot lie about its own examples.
 
 An AI writes docstring examples from the code's apparent intent, not from running it — so
 the expected outputs are guesses, and a wrong guess becomes confident false documentation.
-The informed prompt names the transcript rules and demands the proof.
+The informed [prompt](GLOSSARY.md#prompt-ai) names the transcript rules and demands the proof.
 
 Vague:
 

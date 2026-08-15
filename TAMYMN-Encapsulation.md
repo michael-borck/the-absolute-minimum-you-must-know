@@ -1,6 +1,6 @@
 # Encapsulation in Python: The Absolute Minimum You Must Know
 
-Encapsulation is an object keeping its own data valid — and Python's version rests on two
+Encapsulation is an [object](GLOSSARY.md#object) keeping its own data valid — and Python's version rests on two
 ideas that surprise people coming from Java: privacy is a *convention*, and
 getters/setters are replaced by *properties*. Both fit on this page. The running example
 is a thermostat, an object with an obvious rule to protect.
@@ -28,7 +28,7 @@ doesn't stop you; the convention, code review, and linters do. This is deliberat
 "we're all consenting adults here" is the phrase Pythonistas use for it.
 
 (You'll also see `__celsius` with two underscores. That triggers *name mangling* — the
-attribute is stored as `_Thermostat__celsius` — which exists to avoid name clashes in
+[attribute](GLOSSARY.md#attribute) is stored as `_Thermostat__celsius` — which exists to avoid name clashes in
 subclasses, **not** to provide security. It's still reachable; it's just renamed.)
 
 ## Why Getters and Setters Are Unpythonic
@@ -95,8 +95,8 @@ you pay for control only when you need it.
 
 ## Directing the Machine
 
-Ask an AI for a class with "private fields" and you'll usually get Java-style
-`get_x`/`set_x` pairs, or `__x` mangling misdescribed as security. The informed prompt
+Ask an AI for a [class](GLOSSARY.md#class) with "private fields" and you'll usually get Java-style
+`get_x`/`set_x` pairs, or `__x` mangling misdescribed as security. The informed [prompt](GLOSSARY.md#prompt-ai)
 uses this page's vocabulary — underscore convention, property, invariant.
 
 Vague:
@@ -151,7 +151,7 @@ then a `celsius` property whose setter actually validates.
   free, thorough walkthrough of properties, including the getter/setter comparison. No
   signup for the article.
 - **[Python Tutor](https://pythontutor.com)** — paste the `Thermostat` class and watch
-  reads and writes route through the property methods. No signup.
+  reads and writes route through the property [methods](GLOSSARY.md#method). No signup.
 
 ## Quick Reference
 

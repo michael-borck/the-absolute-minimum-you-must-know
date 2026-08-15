@@ -1,13 +1,13 @@
 # Composition in Python: The Absolute Minimum You Must Know
 
 Composition is one relationship — *has-a* — and one design rule with a reason behind it:
-prefer composition over inheritance. Both fit on this page. The running example is a game
+prefer composition over [inheritance](GLOSSARY.md#inheritance). Both fit on this page. The running example is a game
 entity, because games make the assembly of small parts visible.
 
 ## Has-A: Objects Built From Objects
 
-Instead of one giant `Player` class holding hit points, item lists, and the logic for
-each, build small single-purpose objects and *assemble* them:
+Instead of one giant `Player` [class](GLOSSARY.md#class) holding hit points, item lists, and the logic for
+each, build small single-purpose [objects](GLOSSARY.md#object) and *assemble* them:
 
 ```python
 class Health:
@@ -57,7 +57,7 @@ True
 
 `Player.take_damage` is **delegation**: the whole presents a simple face and forwards the
 work to the part that owns it. Each part is small enough to read in one glance and — the
-underrated payoff — to test alone: `Health` needs no `Player` to exist.
+underrated payoff — to [test](GLOSSARY.md#test) alone: `Health` needs no `Player` to exist.
 
 ## Why Composition Over Inheritance
 
@@ -82,7 +82,7 @@ That's the "why" in three points. **Reuse without ancestry** — any object that
 inventory takes one; with inheritance, reuse is rationed to descendants. **Swap parts,
 even at runtime** — a boss is `Player` plus `self.health = Health(500)`; making bosses,
 ghosts (no health), and merchants by *subclassing* forces one class per combination and
-the tree explodes. **Loose coupling** — `Player` touches only `Health`'s public methods,
+the tree explodes. **Loose coupling** — `Player` touches only `Health`'s public [methods](GLOSSARY.md#method),
 so `Health` can be rewritten freely; a subclass, by contrast, is soldered to its parent's
 internals, which is why deep hierarchies rot (see TAMYMN-Inheritance.md).
 
@@ -94,7 +94,7 @@ abilities of" — and abilities are parts.
 
 Expose a forwarding method (like `take_damage`) when the whole should present one simple
 face or coordinate several parts; let callers reach the part directly
-(`hero.inventory.pick_up(...)`) when the part *is* the interface. What you should not do
+(`hero.inventory.pick_up(...)`) when the part *is* the [interface](GLOSSARY.md#interface). What you should not do
 is write a forwarding method for every method of every part "for neatness" — that
 boilerplate rebuilds the rigid facade composition was meant to avoid. Delegate the calls
 that mean something to the whole; leave the rest alone.

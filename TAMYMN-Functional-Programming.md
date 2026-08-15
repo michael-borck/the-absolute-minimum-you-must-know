@@ -3,7 +3,7 @@
 Functional programming sounds academic, but its working core is one habit — write
 functions that compute results instead of changing things — plus three tools: `sorted`
 with a `key`, comprehensions, and `lambda`. All on this page, and the habit pays off
-double in the AI age: pure functions are the easiest code to test, and to delegate.
+double in the AI age: pure functions are the easiest code to [test](GLOSSARY.md#test), and to delegate.
 
 ## The Habit: Functions Without Side Effects
 
@@ -20,7 +20,7 @@ time:
 33.0
 ```
 
-Everything a function *does* besides returning — mutating a list it was given, updating a
+Everything a function *does* besides returning — mutating a [list](GLOSSARY.md#list) it was given, updating a
 global, printing — is a **side effect**. Side effects aren't evil (a program with none
 does nothing you can see), but they're where bugs hide, so the discipline is: compute in
 pure functions, and push the printing and file-writing to the thin outer edge of the
@@ -46,7 +46,7 @@ The classic functional tools exist in Python: `map` applies a function to every 
 ```
 
 Python prefers the comprehension, and for cause: it reads as English, needs no `lambda`,
-no `list()` wrapper, and does map-plus-filter in a single expression. Read `map`/`filter`
+no `list()` wrapper, and does map-plus-filter in a single [expression](GLOSSARY.md#expression). Read `map`/`filter`
 fluently — AI-generated and JavaScript-influenced code is full of them — but *write*
 comprehensions. Same functional idea (build a new collection, don't mutate the old one),
 better clothes.
@@ -80,7 +80,7 @@ steps or a name would help the reader, promote it to a `def`.
 
 A pure function is a **contract**: inputs in, output back, nothing else touched. That
 makes it trivially testable — call it, check the answer, no setup, no cleanup, no
-database, no "it depends what ran before":
+[database](GLOSSARY.md#database), no "it depends what ran before":
 
 ```python
 >>> def slug(title):
@@ -90,8 +90,8 @@ database, no "it depends what ran before":
 ```
 
 The same property makes pure functions the ideal unit to delegate to an AI: the contract
-*is* the prompt ("write `slug(title)` that returns..."), and verifying the result is
-running the doctests — you never have to trust it, you check it. Code tangled with
+*is* the [prompt](GLOSSARY.md#prompt-ai) ("write `slug(title)` that returns..."), and verifying the result is
+running the [doctests](GLOSSARY.md#doctest) — you never have to trust it, you check it. Code tangled with
 globals and hidden state gives you neither the easy prompt nor the easy check.
 
 ## Directing the Machine
@@ -140,7 +140,7 @@ comprehension `[n * n for n in [1, 2, 3]]`, which builds a real list.
 
 - **[Exercism's Python track](https://exercism.org/tracks/python)** — free; many
   exercises are exactly "transform this collection", and mentors will nudge imperative
-  loop solutions toward comprehensions and `sorted(key=...)`.
+  [loop](GLOSSARY.md#loop) solutions toward comprehensions and `sorted(key=...)`.
 - **[Project Euler](https://projecteuler.net)** — free maths-flavoured problems that are
   natural pure functions: inputs in, one answer out, perfect for comprehension practice.
 

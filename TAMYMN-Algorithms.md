@@ -10,7 +10,7 @@ constantly judge the ones an AI hands you, and these three ideas are the criteri
 A fast wrong answer is worthless, so correctness comes first — and correctness means
 *tested*, not *looks right*. State what the algorithm promises for every input, especially
 the awkward ones — empty, one element, target absent, target at each end: that's where
-humans and LLMs alike write their bugs. Here's linear search, its promise as doctests —
+humans and [LLMs](GLOSSARY.md#llm) alike write their [bugs](GLOSSARY.md#bug). Here's linear search, its promise as [doctests](GLOSSARY.md#doctest) —
 the tests *are* the specification:
 
 ```python
@@ -36,9 +36,9 @@ def linear_search(items, target):
 Big-O answers one question: **when the input gets n times bigger, how much slower does
 this get?** Ignore constants and small terms; watch the shape:
 
-- **O(1)** — constant: same cost at any size (dict lookup).
+- **O(1)** — constant: same cost at any size ([dict](GLOSSARY.md#dictionary) lookup).
 - **O(log n)** — halving: doubling the input adds *one* step (binary search).
-- **O(n)** — linear: double the input, double the work (a single loop).
+- **O(n)** — linear: double the input, double the work (a single [loop](GLOSSARY.md#loop)).
 - **O(n log n)** — sort territory: what good sorting costs (`sorted()`).
 - **O(n²)** — quadratic: double the input, *quadruple* the work (a loop inside a loop).
 
@@ -48,7 +48,7 @@ is a hidden inner loop — that's the most common accidental O(n²) in real code
 
 ## The Canonical Example: Linear vs Binary Search
 
-If the list is **sorted**, you can do enormously better than checking every item: look at
+If the [list](GLOSSARY.md#list) is **sorted**, you can do enormously better than checking every item: look at
 the middle, and half the list is eliminated either way. That's binary search — O(log n).
 
 ```python
@@ -126,7 +126,7 @@ comment. Optimise the algorithm when n is large and growing; otherwise, for the 
 
 ## Directing the Machine
 
-AI assistants produce much better algorithmic code when the prompt states the complexity
+AI assistants produce much better algorithmic code when the [prompt](GLOSSARY.md#prompt-ai) states the complexity
 requirement and the data's properties — otherwise they default to the first workable loop,
 and "workable" at n=10 can be catastrophic at n=10,000,000.
 

@@ -1,8 +1,8 @@
 # Markdown: The Absolute Minimum You Must Know
 
 Markdown is plain text with a handful of conventions that render as formatted documents.
-The whole language that matters fits on this page, and it's the format of READMEs, GitHub
-issues, Jupyter text cells, and your prompts to AI models — learn it once, use it
+The whole language that matters fits on this page, and it's the format of [READMEs](GLOSSARY.md#readme), GitHub
+issues, Jupyter text [cells](GLOSSARY.md#cell), and your [prompts](GLOSSARY.md#prompt-ai) to AI models — learn it once, use it
 everywhere, forever.
 
 ## The Mental Model: Readable Raw, Rendered Pretty
@@ -10,7 +10,7 @@ everywhere, forever.
 A Markdown file is just a `.md` text file. The design rule behind every piece of syntax:
 **the raw text should already look like what it means.** `# Title` looks like a title,
 `- item` looks like a bullet, `**bold**` shouts. That's why you can read a raw README in
-a terminal and why Git diffs of Markdown stay reviewable. If your source is becoming
+a [terminal](GLOSSARY.md#terminal) and why Git [diffs](GLOSSARY.md#diff) of Markdown stay reviewable. If your source is becoming
 unreadable, you're fighting the format — simplify.
 
 ## Headings and Emphasis
@@ -67,7 +67,7 @@ print("hello")
 
 Always put the **language tag** after the opening fence. It buys you two things: renderers
 apply syntax highlighting, and *tools can find and act on your code* — formatters and
-linters process tagged blocks, and this very repository's test suite executes every
+linters process tagged blocks, and this very repository's [test suite](GLOSSARY.md#test-suite) executes every
 ```` ```python ```` block to prove the examples work. An untagged block is a screenshot;
 a tagged block is data.
 

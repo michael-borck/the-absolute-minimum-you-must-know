@@ -15,7 +15,7 @@ different outfits.
 
 ## List: An Ordered Sequence, Fast by Position
 
-Use a list when *order matters* and you access items by position or iterate over all of
+Use a list when *order matters* and you access items by position or [iterate](GLOSSARY.md#iteration) over all of
 them. Append to the end and index anywhere in O(1); but `in`, `.index()`, and
 `.insert(0, x)` all scan or shift — O(n).
 
@@ -31,7 +31,7 @@ True
 ## Tuple: A Frozen Record
 
 A tuple is an immutable sequence — use it when the *positions mean something*: a
-coordinate, an (id, name) pair, a function returning two values. Immutability is a
+coordinate, an (id, name) pair, a [function](GLOSSARY.md#function) returning two values. Immutability is a
 feature twice over: nothing can mutate your record behind your back, and a tuple is
 hashable, so it can be a dict key or set member when a list can't.
 
@@ -64,7 +64,7 @@ name→price, id→record, word→count — it's a dict.
 
 A set is a dict without the values: unordered, unique elements, O(1) membership. Reach for
 it whenever the question is "have I seen this before?" or "which items are in A but not
-B?" — the set operators answer in one line what loops answer in five.
+B?" — the set operators answer in one line what [loops](GLOSSARY.md#loop) answer in five.
 
 ```python
 >>> seen = {"ana", "ben"}
@@ -81,7 +81,7 @@ And `{}` is an empty *dict*; an empty set is `set()`.
 
 ## The Classic Mistake: Scanning a List a Thousand Times
 
-The single most common performance bug in beginner (and LLM) Python: `in` on a list,
+The single most common performance [bug](GLOSSARY.md#bug) in beginner (and [LLM](GLOSSARY.md#llm)) Python: `in` on a list,
 inside a loop. Each check scans the whole list — an accidental O(n²) hiding in one
 innocent keyword. The fix is one line: build a set once, then every check is O(1).
 
@@ -146,7 +146,7 @@ noun, stated with total confidence.
 ## Where to Practice
 
 - **[Exercism](https://exercism.org)** — free; its Python track has dedicated exercise
-  sets on lists, dicts, sets, and tuples, each with a test suite that tells you instantly
+  sets on lists, dicts, sets, and tuples, each with a [test suite](GLOSSARY.md#test-suite) that tells you instantly
   whether your shape choice actually behaves.
 - **[Advent of Code](https://adventofcode.com)** — free puzzles (every year since 2015)
   that punish the wrong structure: part two routinely scales n up until list-scanning

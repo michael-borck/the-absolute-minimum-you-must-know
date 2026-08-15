@@ -89,7 +89,7 @@ def parse_duration(text):
 ```
 
 Note what the old test just did: it guarded the rewrite. That's the compounding payoff —
-every green test is a regression tripwire for all future changes.
+every green test is a [regression](GLOSSARY.md#regression) tripwire for all future changes.
 
 ## Refactor: The Step Everyone Skips
 
@@ -102,18 +102,18 @@ tests exist.
 ## Why Test-First Sharpens the Spec
 
 Writing the test first forces the two decisions that matter before implementation bias
-sets in: what is the **interface** (`parse_duration("1h30m")` — a string in, an int out),
+sets in: what is the **[interface](GLOSSARY.md#interface)** (`parse_duration("1h30m")` — a [string](GLOSSARY.md#string) in, an [int](GLOSSARY.md#integer) out),
 and what is the **answer** (`90`, so minutes are the unit). If you can't write the
-assertion, you don't yet know what you want — better to discover that in a one-line test
+[assertion](GLOSSARY.md#assertion), you don't yet know what you want — better to discover that in a one-line test
 than halfway through an implementation. A failing test is a spec with teeth: unambiguous,
 executable, and impossible to quietly drift away from.
 
 ## Directing the Machine
 
-This is why TDD is the natural AI workflow: prose prompts are vague specs, but a failing
+This is why TDD is the natural AI workflow: prose [prompts](GLOSSARY.md#prompt-ai) are vague specs, but a failing
 test is a precise one. You keep the *what* (red), delegate the *how* (green), and the
-suite — not the assistant's confidence — tells you whether it worked. Commit the tests
-before letting the agent loose, so its work is one reviewable diff against a fixed spec.
+suite — not the assistant's confidence — tells you whether it worked. [Commit](GLOSSARY.md#commit) the tests
+before letting the [agent](GLOSSARY.md#ai-agent) loose, so its work is one reviewable [diff](GLOSSARY.md#diff) against a fixed spec.
 
 Vague:
 

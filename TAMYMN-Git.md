@@ -81,12 +81,12 @@ git log --oneline              # find the commit id you need for the above
 
 The habit that makes everything else low-stakes: **commit before you experiment.**
 Committed work is essentially impossible to lose; uncommitted work is one bad command
-from gone. This is also the rule for AI sessions — commit *before* letting an agent loose
+from gone. This is also the rule for AI sessions — commit *before* letting an [agent](GLOSSARY.md#ai-agent) loose
 on the code, and its whole session becomes one reviewable, revertible diff.
 
 ## Directing the Machine
 
-An AI can run Git for you, but the informed prompt names the model on this page — the
+An AI can run Git for you, but the informed [prompt](GLOSSARY.md#prompt-ai) names the model on this page — the
 three places, branches, staging — so you get exactly the operation you meant, and you can
 verify it with `git status` afterwards.
 

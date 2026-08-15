@@ -1,6 +1,6 @@
 # Functions in Python: The Absolute Minimum You Must Know
 
-Functions are how you name a piece of work so you can reuse it, test it, and hand it to
+Functions are how you name a piece of work so you can reuse it, [test](GLOSSARY.md#test) it, and hand it to
 someone else — human or AI. Effective use rests on about six ideas: `def`, `return`,
 keyword arguments, `*args`/`**kwargs`, scope, and functions-as-values — all on this page.
 
@@ -54,13 +54,13 @@ optional:
 
 Calls with keywords read like documentation — `report(score=97.456, ...)` needs no
 explaining. One warning inherited from the Python doc: never use a mutable default
-(`def f(x, acc=[])`) — the list is created once and shared across calls. Default to
+(`def f(x, acc=[])`) — the [list](GLOSSARY.md#list) is created once and shared across calls. Default to
 `None` and create it inside.
 
 ## *args and **kwargs in One Breath
 
-`*args` scoops up any extra positional arguments into a tuple; `**kwargs` scoops up any
-extra keyword arguments into a dict. That's the whole trick:
+`*args` scoops up any extra positional arguments into a [tuple](GLOSSARY.md#tuple); `**kwargs` scoops up any
+extra keyword arguments into a [dict](GLOSSARY.md#dictionary). That's the whole trick:
 
 ```python
 >>> def summarise(*args, **kwargs):
@@ -91,13 +91,13 @@ a name inside a function makes it local — it never quietly overwrites the glob
 'hi'
 ```
 
-That's a feature: functions can't trample your file's variables by accident. When you
+That's a feature: functions can't trample your file's [variables](GLOSSARY.md#variable) by accident. When you
 think you need `global`, you almost always actually want to pass the value in as an
 argument and `return` the new one out.
 
 ## Functions Are Values
 
-A `def` creates an object and binds a name to it — like any other assignment. So
+A `def` creates an [object](GLOSSARY.md#object) and binds a name to it — like any other assignment. So
 functions can be stored, passed, and returned:
 
 ```python

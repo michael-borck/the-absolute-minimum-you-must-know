@@ -22,13 +22,13 @@ import matplotlib.pyplot as plt   # the universal abbreviation
 
 Why not `plt.plot(...)`, like half the tutorials on the internet? Those `plt.*` calls are
 a convenience layer that operates on the "current" figure — an invisible global. With one
-plot it works; the moment you have two plots, a loop, or a function that draws charts,
+plot it works; the moment you have two plots, a [loop](GLOSSARY.md#loop), or a [function](GLOSSARY.md#function) that draws charts,
 "current" stops being what you think it is and titles land on the wrong plot. `fig, ax =
 plt.subplots()` gives you explicit handles, so there's never a doubt about which plot
 you're talking to.
 
-(The `_ =` is a doc-transcript habit: plotting methods return the objects they create,
-and we're ignoring them. In a script you just call `ax.plot(...)` bare.)
+(The `_ =` is a doc-transcript habit: plotting [methods](GLOSSARY.md#method) return the [objects](GLOSSARY.md#object) they create,
+and we're ignoring them. In a [script](GLOSSARY.md#script) you just call `ax.plot(...)` bare.)
 
 ## Labels, Title, Legend
 
@@ -36,7 +36,7 @@ An unlabelled plot is a rumour, not evidence (`TAMYMN-Visualisation.md` is the d
 *what* to plot and how charts mislead). Every Axes gets three lines minimum:
 
 And because the Axes is a real object, you can *ask it questions* afterwards — which is
-also how you test plotting code without ever looking at a screen:
+also how you [test](GLOSSARY.md#test) plotting code without ever looking at a screen:
 
 ```python
 >>> fig, ax = plt.subplots()
@@ -86,13 +86,13 @@ True
 
 `plt.show()` opens an interactive window and **blocks until you close it** — it belongs
 only at the very end of a desktop script, if anywhere. In Jupyter (`TAMYMN-Jupyter.md`)
-figures render automatically without it, and on a server there is no screen at all. If
+figures render automatically without it, and on a [server](GLOSSARY.md#server) there is no screen at all. If
 your goal is a file, `fig.savefig(...)` alone is the whole job — and it must come
 *before* any `show()`, because closing the window discards the figure.
 
 ## Directing the Machine
 
-AI assistants were trained on two decades of `plt.*` tutorials, so a vague prompt gets
+AI assistants were trained on two decades of `plt.*` tutorials, so a vague [prompt](GLOSSARY.md#prompt-ai) gets
 you the global-state style and a `plt.show()` you didn't want. An informed prompt names
 the model on this page — Figure, Axes, the subplots idiom — and states the output.
 

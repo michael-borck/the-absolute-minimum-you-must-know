@@ -10,15 +10,15 @@ implements, but someone still has to decide, exactly, what should be implemented
 An AI assistant will happily write code for a badly-specified problem — it just writes code
 for the *wrong* problem, confidently. The bottleneck is no longer typing the solution; it's
 specifying it. Every move on this page is a specification skill, which is why they matter
-more now, not less: your decomposition becomes the prompt, and your test cases become the
+more now, not less: your decomposition becomes the [prompt](GLOSSARY.md#prompt-ai), and your [test cases](GLOSSARY.md#test) become the
 proof the machine did what you meant.
 
 ## Move 1: Decomposition
 
 Break the problem into parts small enough that each has an obvious answer. The test of a
 good decomposition: every piece is either trivially doable or an already-solved problem.
-"Build a grading system" is neither; "read scores from a CSV", "map a score to a letter",
-"count letters per class" are all three. Decomposition is also how you debug: a program
+"Build a grading system" is neither; "read scores from a [CSV](GLOSSARY.md#csv)", "map a score to a letter",
+"count letters per class" are all three. Decomposition is also how you [debug](GLOSSARY.md#bug): a program
 made of small named steps can be tested one step at a time.
 
 ## Move 2: Pattern Recognition
@@ -31,7 +31,7 @@ AI for it by name, which gets dramatically better answers than describing it fro
 
 ## Move 3: Abstraction
 
-Abstraction is deciding what to ignore. A function signature is an abstraction: it promises
+Abstraction is deciding what to ignore. A [function](GLOSSARY.md#function) signature is an abstraction: it promises
 *what* comes back and hides *how*. Below, `distinct_per_key` doesn't know or care whether
 the pairs are customers-and-months or IPs-and-pages — that irrelevant detail was abstracted
 away, which is exactly what makes it reusable.
@@ -60,7 +60,7 @@ step that precisely, you haven't finished decomposing — go back to Move 1.
 ## Worked Example: From Fuzzy to Precise
 
 The boss says: *"find our loyal customers."* That's not a computable statement — nothing in
-it says what to iterate over or compare. Decompose it into decisions and steps:
+it says what to [iterate](GLOSSARY.md#iteration) over or compare. Decompose it into decisions and steps:
 
 1. **Define the fuzzy word** (abstraction): *loyal* = ordered in **3 or more distinct
    months**. This is a judgement call — a human one — and it must be made explicitly,
@@ -151,7 +151,7 @@ check each step of the answer against *your* steps.
   (every year since 2015 stays open). Each is a fuzzy story you must decompose before any
   code helps, and part two forces you to refine your abstraction — the full loop, daily.
 - **[Exercism](https://exercism.org)** — free, with a Python track of small exercises and
-  automatic test suites, so you practise writing the tests-first specification style this
+  automatic [test suites](GLOSSARY.md#test-suite), so you practise writing the tests-first specification style this
   page preaches.
 
 ## Quick Reference

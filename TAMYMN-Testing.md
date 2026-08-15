@@ -7,16 +7,16 @@ anatomy of a test, one runner, what to test, and where the bugs hide — all on 
 ## Why Testing Is Now THE Core Skill
 
 The division of labour has shifted: an assistant generates code faster than you can read
-it, and reading is a weak check anyway — plausible-looking code is exactly what an LLM is
+it, and reading is a weak check anyway — plausible-looking code is exactly what an [LLM](GLOSSARY.md#llm) is
 optimised to produce. A test is a stronger check: an executable claim about behaviour that
 the code either meets or doesn't, regardless of who wrote it or how confident they
-sounded. When a machine writes the function, your test is the one part of the exchange you
+sounded. When a machine writes the [function](GLOSSARY.md#function), your test is the one part of the exchange you
 *know* is true. So the scarce skill is no longer producing code; it's specifying and
 verifying it — which is precisely what a test does.
 
 Tests also make change safe. A suite that passes before and after an edit is what lets you
-— or an agent — restructure code without fear, the same way a commit makes an AI session
-revertible in Git.
+— or an [agent](GLOSSARY.md#ai-agent) — restructure code without fear, the same way a [commit](GLOSSARY.md#commit) makes an AI session
+revertible in [Git](GLOSSARY.md#git).
 
 ## Anatomy of a Test: Arrange, Act, Assert
 
@@ -105,8 +105,8 @@ correct refactor, it's testing the *how*, not the *what* — rewrite it.
 ## Edge Cases: Where the Bugs Live
 
 Happy paths almost always work; bugs cluster at the edges. For any function, ask: zero,
-empty, exactly on the boundary, just past the boundary, wrong type, absurdly large. This
-matters double for generated code, which notoriously nails the happy path and confabulates
+empty, exactly on the boundary, just past the boundary, wrong [type](GLOSSARY.md#type), absurdly large. This
+matters double for generated code, which notoriously nails the happy path and [confabulates](GLOSSARY.md#confabulation)
 the edges — edge-case tests are where your review effort pays off most.
 
 ```python
@@ -124,7 +124,7 @@ A workable ratio: one happy-path test, one test per boundary, one per way it can
 
 Ask an AI to "write tests" for existing code and it will happily generate tests that
 mirror whatever the code currently does — bugs included. Tests derived from the
-implementation can never catch the implementation being wrong. The informed prompt states
+implementation can never catch the implementation being wrong. The informed [prompt](GLOSSARY.md#prompt-ai) states
 the contract and the edges, so the tests come from the *spec*, not the code.
 
 Vague:
@@ -146,7 +146,7 @@ boundary, and the rounding promise."
 ## Spot the Confabulation
 
 An AI assistant is asked to test `converter.convert(amount, currency)`, which calls a live
-exchange-rate API, and proudly reports "test added, passing":
+exchange-rate [API](GLOSSARY.md#api), and proudly reports "test added, passing":
 
 ```
 def test_convert(monkeypatch):

@@ -1,18 +1,18 @@
 # SQLite: The Absolute Minimum You Must Know
 
 SQLite is a complete relational database that lives in a single ordinary file — no
-server, no installation, no password, and Python's standard library already speaks it.
+[server](GLOSSARY.md#server), no installation, no password, and Python's standard [library](GLOSSARY.md#library) already speaks it.
 Effective use rests on one loop (connect → execute → fetch → commit), a dozen words of
 SQL, and one non-negotiable rule about parameters — all on this page.
 
 ## The Mental Model: A Database in a File
 
-A relational database is a set of **tables** (like DataFrames that live on disk —
+A relational database is a set of **tables** (like [DataFrames](GLOSSARY.md#dataframe) that live on disk —
 `TAMYMN-Pandas.md`), and SQLite is the smallest honest implementation: the entire
 database — tables, data, indexes — is one file you can copy, email, or commit. Where a
 "real" database is a server you connect to over the network, SQLite is just a library
 reading that file. `sqlite3.connect('app.db')` opens (or creates) it;
-`sqlite3.connect(':memory:')` builds a throwaway database in RAM — perfect for tests and
+`sqlite3.connect(':memory:')` builds a throwaway database in RAM — perfect for [tests](GLOSSARY.md#test) and
 for every example here.
 
 ```python
@@ -24,7 +24,7 @@ conn = sqlite3.connect(':memory:')
 ## The Loop: Execute, Fetch, Commit
 
 You talk to the database in SQL strings via `conn.execute()`, and read answers back with
-`fetchone()` / `fetchall()`, which return tuples:
+`fetchone()` / `fetchall()`, which return [tuples](GLOSSARY.md#tuple):
 
 ```python
 >>> _ = conn.execute("""
@@ -100,8 +100,8 @@ For analysis, hand a query straight to pandas —
 
 ## Directing the Machine
 
-AI assistants produce fluent SQL, and just as fluently interpolate variables straight
-into it. The informed prompt names the schema and demands `?` placeholders, turning
+AI assistants produce fluent SQL, and just as fluently interpolate [variables](GLOSSARY.md#variable) straight
+into it. The informed [prompt](GLOSSARY.md#prompt-ai) names the schema and demands `?` placeholders, turning
 "write a query" into "write a query I can trust with user input".
 
 Vague:
@@ -147,7 +147,7 @@ version is shorter than the excuse:
 
 - **[SQLBolt](https://sqlbolt.com)** — interactive SQL lessons that run entirely in the
   browser, no signup; lessons 1–6 and 12–13 cover every keyword on this page.
-- **The `sqlite3` command-line shell** — already on most systems: run
+- **The `sqlite3` command-line [shell](GLOSSARY.md#shell)** — already on most systems: run
   `sqlite3 scratch.db`, type SQL, see results. `.tables` and `.schema` show what's
   inside any SQLite file you're handed.
 

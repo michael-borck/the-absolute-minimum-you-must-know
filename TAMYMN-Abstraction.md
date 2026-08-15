@@ -1,17 +1,17 @@
 # Abstraction in Python: The Absolute Minimum You Must Know
 
-Abstraction is one habit — depend on *what an object can do*, never on *how it does it* —
+Abstraction is one habit — depend on *what an [object](GLOSSARY.md#object) can do*, never on *how it does it* —
 plus two Python mechanisms for expressing it: duck typing and `abc.ABC`. All on this
 page. The running example is a file-format reader, because swapping formats is where this
 habit pays rent.
 
 ## Interfaces Over Implementations
 
-Suppose your program summarises records that arrive as CSV today. The naive version bakes
-CSV parsing into the summary code; when JSON arrives next month, you're editing summary
+Suppose your program summarises records that arrive as [CSV](GLOSSARY.md#csv) today. The naive version bakes
+CSV parsing into the summary code; when [JSON](GLOSSARY.md#json) arrives next month, you're editing summary
 logic to accommodate a file format. The abstracted version splits the two along an
-**interface**: "a reader is anything with a `read(text)` method returning a list of
-dicts". The summary code depends only on that sentence:
+**interface**: "a reader is anything with a `read(text)` [method](GLOSSARY.md#method) returning a list of
+[dicts](GLOSSARY.md#dictionary)". The summary code depends only on that sentence:
 
 ```python
 def count_records(reader, text):
@@ -26,7 +26,7 @@ discipline: callers upstream of the seam never mention CSV, JSON, or anything co
 ## Duck Typing: The Informal Interface
 
 Python's default is that the interface is *implied*: if it has `read()`, it's a reader
-("if it quacks like a duck..."). No declarations, no inheritance:
+("if it quacks like a duck..."). No declarations, no [inheritance](GLOSSARY.md#inheritance):
 
 ```python
 class CsvReader:
@@ -51,7 +51,7 @@ class JsonReader:
 1
 ```
 
-The two classes share no parent — only a shape. Most Python abstraction is exactly this,
+The two [classes](GLOSSARY.md#class) share no parent — only a shape. Most Python abstraction is exactly this,
 and it's enough for most programs.
 
 ## `abc.ABC`: The Formal Interface
@@ -93,14 +93,14 @@ honours the contract.
 
 Duck typing for interfaces with one or two implementations living near each other; an ABC
 when the seam is a public boundary others build against. Either way, the abstraction is
-only as good as the seam's discipline — see the confabulation below for the classic way
+only as good as the seam's discipline — see the [confabulation](GLOSSARY.md#confabulation) below for the classic way
 to ruin it. (For interfaces built by *assembling* small objects rather than subclassing,
 see TAMYMN-Composition.md.)
 
 ## Directing the Machine
 
 Asked for "flexible" code, an AI will happily generate five formats' worth of `if/elif`
-inside one function. The informed prompt names the seam and who's allowed to know what.
+inside one [function](GLOSSARY.md#function). The informed [prompt](GLOSSARY.md#prompt-ai) names the seam and who's allowed to know what.
 
 Vague:
 

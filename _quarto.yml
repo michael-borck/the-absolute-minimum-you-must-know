@@ -10,6 +10,7 @@ book:
   search: true
   chapters:
     - index.qmd
+    - TAMYMN-Start-Here.md
     - part: "Thinking"
       chapters:
         - TAMYMN-Computational-Thinking.md
@@ -55,6 +56,7 @@ book:
       chapters:
         - TAMYMN-AI-Agents.md
   appendices:
+    - GLOSSARY.md
     - playground.qmd
 
 format:

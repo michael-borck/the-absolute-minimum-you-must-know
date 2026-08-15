@@ -8,7 +8,7 @@ learn it and they're the best exploration tool there is.
 ## The Mental Model: Hidden State
 
 A notebook *looks* like a document that reads top to bottom. It isn't. It's a chat
-session with a running Python process — the **kernel** — and the kernel remembers every
+session with a running Python [process](GLOSSARY.md#process) — the **kernel** — and the kernel remembers every
 cell you've *ever run this session*, in the order you ran them, no matter where those
 cells sit on the page. **Execution order is not reading order.**
 
@@ -23,7 +23,7 @@ ran. Run cells out of order, delete a cell after running it, or re-run one halfw
 page, and the kernel's memory no longer matches the document you're reading. This
 **hidden state** is the cause of the two classic notebook mysteries: "it works for me
 but errors for everyone else" and "it worked yesterday but the same notebook fails
-today". A deleted cell's variables live on in the kernel; a stale value hides behind a
+today". A deleted cell's [variables](GLOSSARY.md#variable) live on in the kernel; a stale value hides behind a
 freshly edited line.
 
 **The honesty check: `Kernel > Restart & Run All`.** It throws away all kernel memory and
@@ -34,11 +34,11 @@ commit, or believe a result.
 ## Two Kinds of Cell
 
 **Code cells** hold Python; running one sends it to the kernel and pins the result
-beneath. A cell's *last expression* is displayed automatically — no `print()` needed —
+beneath. A cell's *last [expression](GLOSSARY.md#expression)* is displayed automatically — no `print()` needed —
 which is why a cell ending in just `df` shows the DataFrame.
 
-**Markdown cells** hold prose in Markdown (see `TAMYMN-Markdown.md`): headings,
-explanations, conclusions. A notebook with no Markdown cells is just a script in
+**Markdown cells** hold prose in [Markdown](GLOSSARY.md#markdown) (see `TAMYMN-Markdown.md`): headings,
+explanations, conclusions. A notebook with no Markdown cells is just a [script](GLOSSARY.md#script) in
 expensive packaging — the interleaved narrative is the point.
 
 One subtlety: the pretty output saved in the `.ipynb` file is a *transcript*, not state.
@@ -71,10 +71,10 @@ Enter to get back inside the cell.
 prose and the evidence together. The tight run-look-tweak loop is unbeatable for
 analysis, teaching, and reports (see `TAMYMN-Pandas.md`, `TAMYMN-Matplotlib.md`).
 
-**Wrong:** anything meant to be *depended on*. Libraries, shared utilities, production
-jobs. Notebooks resist code review (`.ipynb` is JSON — diffs are noise), resist testing,
-and hide state. The graduation move: when a function stops changing, cut it out of the
-notebook into a plain `.py` module, test it (`TAMYMN-Testing.md`), and `import` it back.
+**Wrong:** anything meant to be *depended on*. [Libraries](GLOSSARY.md#library), shared utilities, production
+jobs. Notebooks resist code review (`.ipynb` is [JSON](GLOSSARY.md#json) — [diffs](GLOSSARY.md#diff) are noise), resist testing,
+and hide state. The graduation move: when a [function](GLOSSARY.md#function) stops changing, cut it out of the
+notebook into a plain `.py` [module](GLOSSARY.md#module), test it (`TAMYMN-Testing.md`), and `import` it back.
 Explore in the notebook; *keep* code in modules.
 
 ## Directing the Machine

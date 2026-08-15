@@ -54,10 +54,10 @@ Parent code calling child code — that's the engine inheritance runs on.
 
 ## `super()`: Extend, Don't Replace
 
-Defining `__init__` (or any method) in a child **replaces** the parent's version
+Defining `__init__` (or any [method](GLOSSARY.md#method)) in a child **replaces** the parent's version
 entirely; nothing runs the parent's automatically. `super().__init__(...)` is how you say
-"do the parent's setup, then my extras". Forget it and the instance silently lacks the
-parent's attributes — the error surfaces later, far from the cause, as an
+"do the parent's setup, then my extras". Forget it and the [instance](GLOSSARY.md#instance) silently lacks the
+parent's [attributes](GLOSSARY.md#attribute) — the error surfaces later, far from the cause, as an
 `AttributeError` in some unrelated method. The same pattern works in any override:
 `super().describe()` calls the parent's version so you can decorate it rather than
 re-implement it.
@@ -89,7 +89,7 @@ promise that width and height move independently. That's the **Liskov substituti
 principle** in plain words: *anywhere the parent works, the child must also work, without
 the calling code knowing the difference.* If a child needs the caller to be careful, the
 is-a claim is false in code, no matter how true it sounds in English — model it another
-way (a `Square` that simply *is its own* `Shape`, or composition).
+way (a `Square` that simply *is its own* `Shape`, or [composition](GLOSSARY.md#composition)).
 
 ## Why Deep Hierarchies Rot
 
@@ -105,7 +105,7 @@ TAMYMN-Composition.md.
 
 ## Directing the Machine
 
-AI assistants love inventing hierarchies — ask for three related classes and you may get
+[AI assistants](GLOSSARY.md#ai-agent) love inventing hierarchies — ask for three related classes and you may get
 five, with an abstract base you didn't want. Constrain the tree explicitly, in this
 page's terms.
 

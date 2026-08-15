@@ -2,7 +2,7 @@
 
 Reading and writing files rests on one non-negotiable habit (`with`), one choice (how to
 read: whole, lines, or streaming), one letter (the mode), and one modern API (`pathlib`)
-— all on this page. The examples below write into a temporary directory so you can run
+— all on this page. The examples below write into a temporary [directory](GLOSSARY.md#directory) so you can run
 them anywhere:
 
 ```python
@@ -17,7 +17,7 @@ tmp = Path(tempfile.mkdtemp())   # a scratch directory for this page's examples
 A file handle is a borrowed resource: the operating system lends it to you, and it must
 be given back — otherwise buffered writes may never reach the disk and long-running
 programs leak handles until they crash. `with` is Python's **context manager** syntax:
-"borrow this, and no matter what happens — early return, exception, crash — give it back
+"borrow this, and no matter what happens — early return, [exception](GLOSSARY.md#exception), crash — give it back
 at the end of the block."
 
 ```python
@@ -51,8 +51,8 @@ first line
 second line
 ```
 
-Default to **iteration**: it works identically on a 1 KB config and a 10 GB log, because
-it never loads the whole file. `read()` is for when you genuinely want one string;
+Default to **[iteration](GLOSSARY.md#iteration)**: it works identically on a 1 KB config and a 10 GB log, because
+it never loads the whole file. `read()` is for when you genuinely want one [string](GLOSSARY.md#string);
 `readlines()` is rarely worth it — the file object already iterates by line. Note the
 `.strip()`: every line keeps its trailing `\n`, the number-one "why is my output
 double-spaced?" surprise.
@@ -85,7 +85,7 @@ mangles `café` into `cafÃ©` on a Windows machine (mojibake) or dies with
 
 ## pathlib: The Modern Path API
 
-A `Path` is an object that knows it's a path — no more gluing strings together with
+A `Path` is an object that knows it's a [path](GLOSSARY.md#path) — no more gluing strings together with
 `/` or `os.path.join`. You've been using one all page (`tmp` is a `Path`):
 
 ```python
@@ -105,7 +105,7 @@ block when you need streaming or appending; `Path.glob("*.csv")` finds files by 
 
 ## Directing the Machine
 
-The informed prompt names the concepts on this page — `with`, the mode, the encoding,
+The informed [prompt](GLOSSARY.md#prompt-ai) names the concepts on this page — `with`, the mode, the encoding,
 streaming vs whole-file — because those are exactly the details an AI will otherwise
 guess at, and its guesses are where the bugs live.
 

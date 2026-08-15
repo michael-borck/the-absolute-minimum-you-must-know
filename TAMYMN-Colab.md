@@ -2,12 +2,12 @@
 
 Colab is Jupyter running in your browser on Google's machines — zero install, free GPUs,
 shareable like a Google Doc. Everything in `TAMYMN-Jupyter.md` applies unchanged; what's
-new is *whose computer the kernel runs on*, and the handful of consequences of that fact
+new is *whose computer the [kernel](GLOSSARY.md#kernel) runs on*, and the handful of consequences of that fact
 fill this page.
 
 ## The Mental Model: A Borrowed Computer
 
-When you open a notebook at [colab.research.google.com](https://colab.research.google.com),
+When you open a [notebook](GLOSSARY.md#notebook) at [colab.research.google.com](https://colab.research.google.com),
 Google lends you a fresh virtual machine — the **runtime**. Your notebook file lives in
 your Google Drive and is safe; the runtime is a *loaner*, and it is **ephemeral**. When
 it's recycled — you close the tab too long, hit a time limit, sit idle — everything on it
@@ -15,7 +15,7 @@ vanishes:
 
 - **Files you wrote** to the VM's disk (`/content/...`): gone.
 - **Installed packages**: gone.
-- **All variables** (the usual Jupyter kernel death, see `TAMYMN-Jupyter.md`): gone.
+- **All [variables](GLOSSARY.md#variable)** (the usual Jupyter kernel death, see `TAMYMN-Jupyter.md`): gone.
 
 The notebook's *text and outputs* survive, which fools people into thinking their work is
 safe. The rule: **anything you'd cry about losing must leave the VM before the session
@@ -40,7 +40,7 @@ in, work on `/content`, copy results back out.
 ## Installing Packages — Every Session
 
 Colab pre-installs the scientific stack (pandas, matplotlib, scikit-learn, torch). For
-anything else, a `!` runs a shell command on the VM:
+anything else, a `!` runs a [shell](GLOSSARY.md#shell) command on the VM:
 
 ```
 !pip install beautifulsoup4      # ! = run in the VM's shell (see TAMYMN-Linux.md)
@@ -72,11 +72,11 @@ kernels — your `df` does not exist on their machine until they run the cells t
 
 Colab is the right tool for exploration, coursework, and anything GPU-hungry that fits in
 a session. It's the wrong tool the moment you need: work that survives without babysitting
-(runtime limits), private data you can't upload to Google, version control that diffs
-(notebooks are JSON), or code others `import`. That's when you graduate to a real
-environment — Python and a virtual environment on your own machine, VS Code
+(runtime limits), private data you can't upload to Google, version control that [diffs](GLOSSARY.md#diff)
+(notebooks are [JSON](GLOSSARY.md#json)), or code others `import`. That's when you graduate to a real
+environment — Python and a [virtual environment](GLOSSARY.md#virtual-environment) on your own machine, VS Code
 (`TAMYMN-VSCode.md`), and Git (`TAMYMN-Git.md`) — moving stable code out of the notebook
-into `.py` modules exactly as `TAMYMN-Jupyter.md` prescribes.
+into `.py` [modules](GLOSSARY.md#module) exactly as `TAMYMN-Jupyter.md` prescribes.
 
 ## Directing the Machine
 
