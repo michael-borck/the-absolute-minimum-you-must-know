@@ -22,9 +22,9 @@ give a precise instruction, and verify the result*. Every chapter therefore ends
 
 ## Read it
 
-- **As a book** — the rendered site (built with [Quarto](https://quarto.org)) lives on
-  GitHub Pages, with search, three guided trails, and a "where should I start?"
-  self-diagnostic on the front page.
+- **As a book** — **[tamymn.borck.education](https://tamymn.borck.education)**: the
+  rendered site (built with [Quarto](https://quarto.org)), with search, guided trails,
+  a "where should I start?" self-diagnostic, and an in-browser Python playground.
 - **As plain files** — every chapter is a standalone Markdown file, readable right here
   on GitHub. Start anywhere; each page stands alone.
 - **In a real environment** — open the repo in **GitHub Codespaces** (it ships a
