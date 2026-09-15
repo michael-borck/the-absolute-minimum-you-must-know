@@ -2,9 +2,13 @@ project:
   type: book
   output-dir: _book
   resources:
+    - LICENSE
+    - LICENSE-CONTENT.md
+    - LICENSE-CODE.md
     - CNAME
 
 book:
+  license: "CC BY 4.0 International"
   title: "The Absolute Minimum You Must Know"
   author: "Michael Borck"
   site-url: https://minimum.borck.education
