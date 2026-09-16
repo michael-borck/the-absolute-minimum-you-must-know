@@ -128,6 +128,22 @@ of chapters you still need appears below. (If most of these statements don't eve
 
 That's the tour. Pick a trail — or tick the boxes above and let the book pick for you.
 
+## Go deeper with the series
+
+Every chapter here is the minimum, deliberately compressed. When a topic earns more of your time, the companion books give it the full treatment:
+
+| If you read here | Go deeper with |
+|---|---|
+| Thinking — computational thinking, algorithms, data structures | [Think Python, Direct AI](https://michael-borck.github.io/think-python-direct-ai) — computational thinking for absolute beginners |
+| Python, Functions, File I/O | [Code Python, Consult AI](https://michael-borck.github.io/code-python-consult-ai) — Python fundamentals through AI conversation |
+| Objects — OOP and its principles | [Code Python, Consult AI](https://michael-borck.github.io/code-python-consult-ai) |
+| Verification — testing, doctest, TDD | [Ship Python, Orchestrate AI](https://michael-borck.github.io/ship-python-orchestrate-ai) — professional practices, testing and tooling |
+| Tools — Linux, Git, Markdown, VS Code, Jupyter | [Ship Python, Orchestrate AI](https://michael-borck.github.io/ship-python-orchestrate-ai) |
+| Data — pandas, visualisation, SQLite | [Think Python, Direct AI](https://michael-borck.github.io/think-python-direct-ai) for foundations, [Code Python, Consult AI](https://michael-borck.github.io/code-python-consult-ai) for depth |
+| Directing AI — AI coding agents | [Converse Python, Partner AI](https://michael-borck.github.io/converse-python-partner-ai) — the intentional prompting methodology |
+
+The full series, including the discipline-neutral methodology book *Conversation, Not Delegation*, is listed at [books.borck.education](https://books.borck.education).
+
 ## Licence
 
 Book content is licensed under [Creative Commons Attribution 4.0 International (CC BY 4.0 International)](https://creativecommons.org/licenses/by/4.0/). Original code examples and accompanying software are licensed under the [MIT License](https://opensource.org/licenses/MIT).
