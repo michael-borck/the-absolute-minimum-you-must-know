@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.10.19">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -13,10 +13,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -41,14 +44,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b626d73c4c936ccc3cb08be7d45d1df6.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-367522ac618891c39d4b2ae87ea7600e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-c5491cb7295b3d79f070a3ccf938a403.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-367522ac618891c39d4b2ae87ea7600e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-36f2db2e0c24a8dfe38894d2c7306603.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-a59c595c00dfb3cf3f084b5c8c0c922f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-36f2db2e0c24a8dfe38894d2c7306603.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
 <link href="site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -82,6 +85,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 
 
+<link rel="stylesheet" href="book-design.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -592,6 +596,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#reading-with-an-ai-beside-you" id="toc-reading-with-an-ai-beside-you" class="nav-link" data-scroll-target="#reading-with-an-ai-beside-you">Reading with an AI beside you</a></li>
   <li><a href="#diagnostic" id="toc-diagnostic" class="nav-link" data-scroll-target="#diagnostic">Where should I start?</a></li>
   <li><a href="#using-this-book" id="toc-using-this-book" class="nav-link" data-scroll-target="#using-this-book">Using this book</a></li>
+  <li><a href="#go-deeper-with-the-series" id="toc-go-deeper-with-the-series" class="nav-link" data-scroll-target="#go-deeper-with-the-series">Go deeper with the series</a></li>
+  <li><a href="#licence" id="toc-licence" class="nav-link" data-scroll-target="#licence">Licence</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/michael-borck/the-absolute-minimum-you-must-know/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/michael-borck/the-absolute-minimum-you-must-know/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -625,8 +631,9 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+
 <section id="welcome" class="level1 unnumbered">
-<h1 class="unnumbered">Welcome</h1>
+<h1 class="unnumbered">Welcome</h1><p><img src="cover.png" title="The Absolute Minimum You Must Know" class="quarto-cover-image nolightbox img-fluid"></p>
 <p>For every topic in software development there is a minimum viable set of ideas that unlocks everything else. Each chapter in this book is one page: read it in ten minutes, know enough to work — and, just as importantly in the age of AI, know enough to <strong>direct the machine and catch it when it’s wrong</strong>.</p>
 <p>That second half is the point. An AI assistant will happily write your code, your queries, and your shell commands. What it cannot do is know what you meant, or check its own work with your interests at heart. The minimum you must know is no longer “enough to do everything by hand” — it is enough to <em>decompose a problem, give a precise instruction, and verify the result</em>. Every chapter here ends with exactly that: how to direct an AI at the topic, and a plausible-but-wrong AI answer for you to catch.</p>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -709,6 +716,54 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>As plain files</strong> — every chapter is a standalone Markdown file readable straight on GitHub. <code>git clone</code> and read in your editor.</li>
 </ul>
 <p>That’s the tour. Pick a trail — or tick the boxes above and let the book pick for you.</p>
+</section>
+<section id="go-deeper-with-the-series" class="level2">
+<h2 class="anchored" data-anchor-id="go-deeper-with-the-series">Go deeper with the series</h2>
+<p>Every chapter here is the minimum, deliberately compressed. When a topic earns more of your time, the companion books give it the full treatment:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>If you read here</th>
+<th>Go deeper with</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Thinking — computational thinking, algorithms, data structures</td>
+<td><a href="https://michael-borck.github.io/think-python-direct-ai">Think Python, Direct AI</a> — computational thinking for absolute beginners</td>
+</tr>
+<tr class="even">
+<td>Python, Functions, File I/O</td>
+<td><a href="https://michael-borck.github.io/code-python-consult-ai">Code Python, Consult AI</a> — Python fundamentals through AI conversation</td>
+</tr>
+<tr class="odd">
+<td>Objects — OOP and its principles</td>
+<td><a href="https://michael-borck.github.io/code-python-consult-ai">Code Python, Consult AI</a></td>
+</tr>
+<tr class="even">
+<td>Verification — testing, doctest, TDD</td>
+<td><a href="https://michael-borck.github.io/ship-python-orchestrate-ai">Ship Python, Orchestrate AI</a> — professional practices, testing and tooling</td>
+</tr>
+<tr class="odd">
+<td>Tools — Linux, Git, Markdown, VS Code, Jupyter</td>
+<td><a href="https://michael-borck.github.io/ship-python-orchestrate-ai">Ship Python, Orchestrate AI</a></td>
+</tr>
+<tr class="even">
+<td>Data — pandas, visualisation, SQLite</td>
+<td><a href="https://michael-borck.github.io/think-python-direct-ai">Think Python, Direct AI</a> for foundations, <a href="https://michael-borck.github.io/code-python-consult-ai">Code Python, Consult AI</a> for depth</td>
+</tr>
+<tr class="odd">
+<td>Directing AI — AI coding agents</td>
+<td><a href="https://michael-borck.github.io/converse-python-partner-ai">Converse Python, Partner AI</a> — the intentional prompting methodology</td>
+</tr>
+</tbody>
+</table>
+<p>The full series, including the discipline-neutral methodology book <em>Conversation, Not Delegation</em>, is listed at <a href="https://books.borck.education">books.borck.education</a>.</p>
+</section>
+<section id="licence" class="level2">
+<h2 class="anchored" data-anchor-id="licence">Licence</h2>
+<p>Book content is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International (CC BY 4.0 International)</a>. Original code examples and accompanying software are licensed under the <a href="https://opensource.org/licenses/MIT">MIT License</a>.</p>
+<p>These grants cover material the author has authority to license. Separately credited third-party material retains its stated terms. Give appropriate credit, link the content licence and indicate changes; retain the MIT notice when reusing code.</p>
 
 
 <script type="ojs-module-contents">

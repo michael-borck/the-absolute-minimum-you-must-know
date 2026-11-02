@@ -50,6 +50,26 @@
     ]
   },
   {
+    "objectID": "index.html#go-deeper-with-the-series",
+    "href": "index.html#go-deeper-with-the-series",
+    "title": "The Absolute Minimum You Must Know",
+    "section": "Go deeper with the series",
+    "text": "Go deeper with the series\nEvery chapter here is the minimum, deliberately compressed. When a topic earns more of your time, the companion books give it the full treatment:\n\n\n\nIf you read here\nGo deeper with\n\n\n\n\nThinking — computational thinking, algorithms, data structures\nThink Python, Direct AI — computational thinking for absolute beginners\n\n\nPython, Functions, File I/O\nCode Python, Consult AI — Python fundamentals through AI conversation\n\n\nObjects — OOP and its principles\nCode Python, Consult AI\n\n\nVerification — testing, doctest, TDD\nShip Python, Orchestrate AI — professional practices, testing and tooling\n\n\nTools — Linux, Git, Markdown, VS Code, Jupyter\nShip Python, Orchestrate AI\n\n\nData — pandas, visualisation, SQLite\nThink Python, Direct AI for foundations, Code Python, Consult AI for depth\n\n\nDirecting AI — AI coding agents\nConverse Python, Partner AI — the intentional prompting methodology\n\n\n\nThe full series, including the discipline-neutral methodology book Conversation, Not Delegation, is listed at books.borck.education.",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "index.html#licence",
+    "href": "index.html#licence",
+    "title": "The Absolute Minimum You Must Know",
+    "section": "Licence",
+    "text": "Licence\nBook content is licensed under Creative Commons Attribution 4.0 International (CC BY 4.0 International). Original code examples and accompanying software are licensed under the MIT License.\nThese grants cover material the author has authority to license. Separately credited third-party material retains its stated terms. Give appropriate credit, link the content licence and indicate changes; retain the MIT notice when reusing code.",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
     "objectID": "TAMYMN-Start-Here.html",
     "href": "TAMYMN-Start-Here.html",
     "title": "1  Start Here: The Absolute Minimum Before the Minimum",
