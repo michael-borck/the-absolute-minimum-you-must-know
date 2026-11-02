@@ -8,6 +8,7 @@ project:
     - CNAME
 
 book:
+  cover-image: cover.png
   license: "CC BY 4.0 International"
   title: "The Absolute Minimum You Must Know"
   author: "Michael Borck"
@@ -71,5 +72,6 @@ format:
     theme:
       light: cosmo
       dark: darkly
+    css: book-design.css
     toc: true
     code-copy: true

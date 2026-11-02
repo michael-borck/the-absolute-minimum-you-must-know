@@ -1,0 +1,14 @@
+version: 1
+style: editorial-c
+art: cover-art.png
+family: PROGRAMMING / QUICK REFERENCE
+accent: '#536862'
+background: '#E4EAE6'
+title_lines:
+- The Absolute
+- Minimum You
+- Must Know
+dark: false
+pixel: false
+scene: reference
+art_origin: Locally constructed editable vector illustration.
